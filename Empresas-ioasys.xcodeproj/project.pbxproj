@@ -56,15 +56,47 @@
 		386D0823244900BE00A465A8 /* Empresas-ioasys */ = {
 			isa = PBXGroup;
 			children = (
-				386D0824244900BE00A465A8 /* AppDelegate.swift */,
-				386D0826244900BE00A465A8 /* SceneDelegate.swift */,
+				386D0832244900C100A465A8 /* Info.plist */,
+				38A273F6244904FA00A79613 /* Default */,
+				38A273F52449040C00A79613 /* Model */,
+				38A273F42449040300A79613 /* View */,
+				38A273F3244903F800A79613 /* Controller */,
+			);
+			path = "Empresas-ioasys";
+			sourceTree = "<group>";
+		};
+		38A273F3244903F800A79613 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				386D0828244900BE00A465A8 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		38A273F42449040300A79613 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				386D082A244900BE00A465A8 /* Main.storyboard */,
 				386D082D244900C100A465A8 /* Assets.xcassets */,
 				386D082F244900C100A465A8 /* LaunchScreen.storyboard */,
-				386D0832244900C100A465A8 /* Info.plist */,
 			);
-			path = "Empresas-ioasys";
+			path = View;
+			sourceTree = "<group>";
+		};
+		38A273F52449040C00A79613 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		38A273F6244904FA00A79613 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				386D0824244900BE00A465A8 /* AppDelegate.swift */,
+				386D0826244900BE00A465A8 /* SceneDelegate.swift */,
+			);
+			path = Default;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
