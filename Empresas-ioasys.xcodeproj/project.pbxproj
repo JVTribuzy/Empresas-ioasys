@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		386D082C244900BE00A465A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386D082A244900BE00A465A8 /* Main.storyboard */; };
 		386D082E244900C100A465A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 386D082D244900C100A465A8 /* Assets.xcassets */; };
 		386D0831244900C100A465A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386D082F244900C100A465A8 /* LaunchScreen.storyboard */; };
+		38A273F92449087D00A79613 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 38A273F82449087D00A79613 /* Stevia */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38A273F92449087D00A79613 /* Stevia in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +117,9 @@
 			dependencies = (
 			);
 			name = "Empresas-ioasys";
+			packageProductDependencies = (
+				38A273F82449087D00A79613 /* Stevia */,
+			);
 			productName = "Empresas-ioasys";
 			productReference = 386D0821244900BE00A465A8 /* Empresas-ioasys.app */;
 			productType = "com.apple.product-type.application";
@@ -143,6 +148,9 @@
 				Base,
 			);
 			mainGroup = 386D0818244900BE00A465A8;
+			packageReferences = (
+				38A273F72449087D00A79613 /* XCRemoteSwiftPackageReference "Stevia" */,
+			);
 			productRefGroup = 386D0822244900BE00A465A8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -370,6 +378,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		38A273F72449087D00A79613 /* XCRemoteSwiftPackageReference "Stevia" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/freshOS/Stevia";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		38A273F82449087D00A79613 /* Stevia */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38A273F72449087D00A79613 /* XCRemoteSwiftPackageReference "Stevia" */;
+			productName = Stevia;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 386D0819244900BE00A465A8 /* Project object */;
 }
