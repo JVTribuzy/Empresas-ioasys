@@ -9,6 +9,6 @@
 import Foundation
 
 protocol IoasyCustomView {
-    func style()
     func autolayout()
+    func style()
 }
