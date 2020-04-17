@@ -14,6 +14,7 @@
 		386D082E244900C100A465A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 386D082D244900C100A465A8 /* Assets.xcassets */; };
 		386D0831244900C100A465A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386D082F244900C100A465A8 /* LaunchScreen.storyboard */; };
 		38A273F92449087D00A79613 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 38A273F82449087D00A79613 /* Stevia */; };
+		38B9490B244965C300127BB0 /* IoasysCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B9490A244965C300127BB0 /* IoasysCustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		386D082D244900C100A465A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		386D0830244900C100A465A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		386D0832244900C100A465A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38B9490A244965C300127BB0 /* IoasysCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoasysCustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +80,10 @@
 		38A273F42449040300A79613 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				38B949092449659E00127BB0 /* Archiecture */,
 				386D082A244900BE00A465A8 /* Main.storyboard */,
-				386D082D244900C100A465A8 /* Assets.xcassets */,
 				386D082F244900C100A465A8 /* LaunchScreen.storyboard */,
+				386D082D244900C100A465A8 /* Assets.xcassets */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -99,6 +102,14 @@
 				386D0826244900BE00A465A8 /* SceneDelegate.swift */,
 			);
 			path = Default;
+			sourceTree = "<group>";
+		};
+		38B949092449659E00127BB0 /* Archiecture */ = {
+			isa = PBXGroup;
+			children = (
+				38B9490A244965C300127BB0 /* IoasysCustomView.swift */,
+			);
+			name = Archiecture;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B9490B244965C300127BB0 /* IoasysCustomView.swift in Sources */,
 				386D0829244900BE00A465A8 /* ViewController.swift in Sources */,
 				386D0825244900BE00A465A8 /* AppDelegate.swift in Sources */,
 				386D0827244900BE00A465A8 /* SceneDelegate.swift in Sources */,
