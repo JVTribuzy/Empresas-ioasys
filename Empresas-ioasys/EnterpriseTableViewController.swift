@@ -17,6 +17,8 @@ class EnterpriseTableViewController: UITableViewController {
     
     override init(style: UITableView.Style) {
         super.init(style: style)
+        setupTableView()
+        addNotifications()
     }
     
     required init?(coder: NSCoder) {
@@ -24,4 +26,34 @@ class EnterpriseTableViewController: UITableViewController {
     }
     
     deinit {}
+}
+
+extension EnterpriseTableViewController{
+    func setupTableView(){
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "enterpriseCell")
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return model.enterprises.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "enterpriseCell", for: indexPath)
+        
+        cell.textLabel?.text = model.enterprises[indexPath.row].enterpriseName
+        
+        return cell
+    }
+}
+
+extension EnterpriseTableViewController{
+    private func addNotifications(){
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadEnterpriseTableViewNotificationReceived(_:)), name: .ioasysReloadEnterpriseTableView, object: nil)
+    }
+    
+    @objc private func reloadEnterpriseTableViewNotificationReceived(_ notification: NSNotification){
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }

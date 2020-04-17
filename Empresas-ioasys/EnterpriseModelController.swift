@@ -16,9 +16,7 @@ class EnterpriseModelController {
     private init() {
         self.enterprises = []
         
-        DispatchQueue.main.async{
-            self.getEnterprises()
-        }
+        getEnterprises()
     }
     
     private func getEnterprises(){
