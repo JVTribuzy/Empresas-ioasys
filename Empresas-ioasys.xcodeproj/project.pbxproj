@@ -17,6 +17,9 @@
 		38B9490B244965C300127BB0 /* IoasysCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B9490A244965C300127BB0 /* IoasysCustomView.swift */; };
 		38B9490D2449EE4A00127BB0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B9490C2449EE4A00127BB0 /* LoginView.swift */; };
 		38B949102449F04B00127BB0 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B9490F2449F04B00127BB0 /* Extension+UIColor.swift */; };
+		38B949122449F2E100127BB0 /* EnterpriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B949112449F2E100127BB0 /* EnterpriseViewController.swift */; };
+		38B949142449F31A00127BB0 /* EnterpriseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B949132449F31A00127BB0 /* EnterpriseView.swift */; };
+		38B949162449F47D00127BB0 /* Extension+NSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B949152449F47D00127BB0 /* Extension+NSNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		38B9490A244965C300127BB0 /* IoasysCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoasysCustomView.swift; sourceTree = "<group>"; };
 		38B9490C2449EE4A00127BB0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		38B9490F2449F04B00127BB0 /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
+		38B949112449F2E100127BB0 /* EnterpriseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseViewController.swift; sourceTree = "<group>"; };
+		38B949132449F31A00127BB0 /* EnterpriseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseView.swift; sourceTree = "<group>"; };
+		38B949152449F47D00127BB0 /* Extension+NSNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NSNotification.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				386D0828244900BE00A465A8 /* LoginViewController.swift */,
+				38B949112449F2E100127BB0 /* EnterpriseViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -86,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				38B9490C2449EE4A00127BB0 /* LoginView.swift */,
+				38B949132449F31A00127BB0 /* EnterpriseView.swift */,
 				38B949092449659E00127BB0 /* Archiecture */,
 				386D082A244900BE00A465A8 /* Main.storyboard */,
 				386D082F244900C100A465A8 /* LaunchScreen.storyboard */,
@@ -122,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				38B9490F2449F04B00127BB0 /* Extension+UIColor.swift */,
+				38B949152449F47D00127BB0 /* Extension+NSNotification.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -203,9 +212,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B949162449F47D00127BB0 /* Extension+NSNotification.swift in Sources */,
 				38B9490B244965C300127BB0 /* IoasysCustomView.swift in Sources */,
 				386D0829244900BE00A465A8 /* LoginViewController.swift in Sources */,
 				386D0825244900BE00A465A8 /* AppDelegate.swift in Sources */,
+				38B949142449F31A00127BB0 /* EnterpriseView.swift in Sources */,
+				38B949122449F2E100127BB0 /* EnterpriseViewController.swift in Sources */,
 				38B9490D2449EE4A00127BB0 /* LoginView.swift in Sources */,
 				386D0827244900BE00A465A8 /* SceneDelegate.swift in Sources */,
 				38B949102449F04B00127BB0 /* Extension+UIColor.swift in Sources */,

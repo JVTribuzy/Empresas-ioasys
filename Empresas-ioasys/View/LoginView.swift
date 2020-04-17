@@ -24,7 +24,7 @@ class LoginView: UIView{
     
     deinit {}
     
-    let buttonToEnterprise: UIButton = UIButton()
+    public let buttonToEnterprise: UIButton = UIButton()
 }
 
 extension LoginView: IoasyCustomView{
@@ -32,6 +32,7 @@ extension LoginView: IoasyCustomView{
     func autolayout() {
         // buttonToEnterprise
         subviews(buttonToEnterprise)
+        buttonToEnterpriseTarget()
         buttonToEnterprise.centerVertically()
         buttonToEnterprise.height(50).right(30).left(30)
     }
@@ -40,5 +41,14 @@ extension LoginView: IoasyCustomView{
         // buttonToEnterprise
         buttonToEnterprise.text(("entra").uppercased())
         buttonToEnterprise.backgroundColor = UIColor.loginButtonColor
+    }
+}
+
+extension LoginView{
+    private func buttonToEnterpriseTarget(){
+        buttonToEnterprise.addTarget(self, action: #selector(goToEnterpriseViewController), for: .touchUpInside)
+    }
+    @objc private func goToEnterpriseViewController(){
+        NotificationCenter.default.post(name: .ioasysGoToEnterpriseViewController, object: nil)
     }
 }
