@@ -11,6 +11,7 @@ import UIKit
 import Stevia
 
 class LoginView: UIView{
+    
     private override init(frame: CGRect) {
         super.init(frame: .zero)
         
@@ -40,7 +41,7 @@ extension LoginView: IoasyCustomView{
     func style() {
         // buttonToEnterprise
         buttonToEnterprise.text(("entra").uppercased())
-        buttonToEnterprise.backgroundColor = UIColor.loginButtonColor
+        buttonToEnterprise.backgroundColor = UIColor.ioasysLoginButtonColor
     }
 }
 

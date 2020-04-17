@@ -18,6 +18,11 @@ class LoginViewController: UIViewController {
     }
     
     deinit { NotificationCenter.default.removeObserver(self) }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .lightContent
+    }
+    
 }
 
 extension LoginViewController{

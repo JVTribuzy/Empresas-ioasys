@@ -14,4 +14,10 @@ class EnterpriseViewController: UIViewController {
         super.viewDidLoad()
         view = EnterpriseView()
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+          return .lightContent
+    }
+    
+    deinit {}
 }

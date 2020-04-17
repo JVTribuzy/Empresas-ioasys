@@ -14,8 +14,8 @@ class EnterpriseView: UIView{
     private override init(frame: CGRect) {
         super.init(frame: .zero)
         
-        self.autolayout()
-        self.style()
+        autolayout()
+        style()
     }
     
     required init?(coder: NSCoder) {
@@ -23,15 +23,23 @@ class EnterpriseView: UIView{
     }
     
     deinit {}
+    
+    public let enterpriseContentView: UIView = EnterpriseContentView()
 }
 
 extension EnterpriseView: IoasyCustomView{
     
     func autolayout() {
-        
+        // enterpriseContentView
+        subviews(enterpriseContentView)
+        enterpriseContentView.Bottom == safeAreaLayoutGuide.Bottom
+        enterpriseContentView.right(0.0).left(0.0).bottom(0.0).top(70)
     }
     
     func style() {
-        backgroundColor = .green
+        backgroundColor = UIColor.ioasysEnterpriseScreenBackgroundColor
+        
+        // enterpriseContentView
+        enterpriseContentView.backgroundColor = .white
     }
 }
