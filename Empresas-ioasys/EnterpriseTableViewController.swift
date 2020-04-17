@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 
 class EnterpriseTableViewController: UITableViewController {
+    
+    var model: EnterpriseModelController = {
+        return EnterpriseModelController.shared
+    }()
+    
     override init(style: UITableView.Style) {
         super.init(style: style)
     }
