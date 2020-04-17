@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		386D0825244900BE00A465A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D0824244900BE00A465A8 /* AppDelegate.swift */; };
 		386D0827244900BE00A465A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D0826244900BE00A465A8 /* SceneDelegate.swift */; };
-		386D0829244900BE00A465A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D0828244900BE00A465A8 /* ViewController.swift */; };
+		386D0829244900BE00A465A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D0828244900BE00A465A8 /* LoginViewController.swift */; };
 		386D082C244900BE00A465A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386D082A244900BE00A465A8 /* Main.storyboard */; };
 		386D082E244900C100A465A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 386D082D244900C100A465A8 /* Assets.xcassets */; };
 		386D0831244900C100A465A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386D082F244900C100A465A8 /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		386D0821244900BE00A465A8 /* Empresas-ioasys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Empresas-ioasys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		386D0824244900BE00A465A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		386D0826244900BE00A465A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		386D0828244900BE00A465A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		386D0828244900BE00A465A8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		386D082B244900BE00A465A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		386D082D244900C100A465A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		386D0830244900C100A465A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		38A273F3244903F800A79613 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				386D0828244900BE00A465A8 /* ViewController.swift */,
+				386D0828244900BE00A465A8 /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38B9490B244965C300127BB0 /* IoasysCustomView.swift in Sources */,
-				386D0829244900BE00A465A8 /* ViewController.swift in Sources */,
+				386D0829244900BE00A465A8 /* LoginViewController.swift in Sources */,
 				386D0825244900BE00A465A8 /* AppDelegate.swift in Sources */,
 				386D0827244900BE00A465A8 /* SceneDelegate.swift in Sources */,
 			);
