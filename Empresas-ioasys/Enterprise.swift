@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - Enterpris
-struct Enterprise {
+struct Enterprise: Decodable{
     let id: Int
     let emailEnterprise: String?
     let facebook, twitter, linkedin: URL?
@@ -42,7 +42,7 @@ struct Enterprise {
 }
 
 // MARK: - EnterpriseType
-struct EnterpriseType {
+struct EnterpriseType : Decodable{
     let id: Int
     let enterpriseTypeName: String
     
