@@ -22,4 +22,5 @@ extension UIColor{
 extension UIColor{
     static let ioasysLoginButtonColor = UIColor.init(red: 224, green: 30, blue: 105)
     static let ioasysEnterpriseScreenBackgroundColor = UIColor.init(red: 177, green: 27, blue: 140)
+    static let ioasysBlueCell = UIColor.init(red: 121, green: 187, blue: 202)
 }

@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lauch-back" translatesAutoresizingMaskIntoConstraints="NO" id="FrZ-dH-cso">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch-back" translatesAutoresizingMaskIntoConstraints="NO" id="FrZ-dH-cso">
                                 <rect key="frame" x="0.0" y="-44" width="375" height="745"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_home" translatesAutoresizingMaskIntoConstraints="NO" id="jio-NG-TLJ">
@@ -44,7 +44,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="lauch-back" width="375" height="667"/>
+        <image name="launch-back" width="375" height="667"/>
         <image name="logo_home" width="185" height="45"/>
     </resources>
 </document>

@@ -30,7 +30,8 @@ class EnterpriseTableViewController: UITableViewController {
 
 extension EnterpriseTableViewController{
     func setupTableView(){
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "enterpriseCell")
+        tableView.register(EnterpriseTableViewCell.self, forCellReuseIdentifier: "enterpriseCell")
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,9 +39,9 @@ extension EnterpriseTableViewController{
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "enterpriseCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "enterpriseCell", for: indexPath) as! EnterpriseTableViewCell
         
-        cell.textLabel?.text = model.enterprises[indexPath.row].enterpriseName
+        cell.fill(model.enterprises[indexPath.row])
         
         return cell
     }

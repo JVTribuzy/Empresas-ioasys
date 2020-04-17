@@ -12,6 +12,6 @@ public let enterpriseAPIModule = "enterprises"
 public let enterpriseEndpoint = "\(apiEndpoint)/\(apiVersion)/\(enterpriseAPIModule)"
 
 public let contentType = "application/json"
-public let accessToken = "UbFGRdUgcXzbEFw4y0IUwQ"
-public let client = "ihPlSiPDSwoy_3Fmvb--wA"
+public let accessToken = "y6kQfo9o-vS2suMxcqRvrA"
+public let client = "NAe3Yy3b0It2URMYsrl3PA"
 public let uid = "testeapple@ioasys.com.br"
