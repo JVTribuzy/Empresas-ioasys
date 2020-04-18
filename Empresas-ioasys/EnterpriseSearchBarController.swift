@@ -7,9 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
-extension EnterpriseSearchBar{
+extension EnterpriseSearchBar: UITextFieldDelegate{
     func textFieldTarget(){
+        self.searchTextField.delegate = self
+        searchTextField.returnKeyType = .search
         searchTextField.addTarget(self, action: #selector(searchTextFieldEdited), for: .editingChanged)
     }
     
@@ -56,6 +59,11 @@ extension EnterpriseSearchBar{
                 }
             }
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.endEditing(true)
+        return false
     }
 }
  

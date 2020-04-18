@@ -18,6 +18,7 @@
 		386D0831244900C100A465A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386D082F244900C100A465A8 /* LaunchScreen.storyboard */; };
 		387A8A42244B3FCC001704D5 /* EnterpriseSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A8A41244B3FCC001704D5 /* EnterpriseSearchBar.swift */; };
 		387A8A44244B5273001704D5 /* EnterpriseSearchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A8A43244B5273001704D5 /* EnterpriseSearchBarController.swift */; };
+		387A8A46244B7797001704D5 /* Extensio+UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A8A45244B7797001704D5 /* Extensio+UIWindow.swift */; };
 		387EE999244A4CF7004F0883 /* EnterpriseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EE998244A4CF7004F0883 /* EnterpriseTableViewCell.swift */; };
 		387EE99B244A4DA8004F0883 /* EnterpriseTableViewCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EE99A244A4DA8004F0883 /* EnterpriseTableViewCellStyle.swift */; };
 		387EE9A7244A509B004F0883 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 387EE99D244A509B004F0883 /* Rubik-Italic.ttf */; };
@@ -57,6 +58,7 @@
 		386D0832244900C100A465A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		387A8A41244B3FCC001704D5 /* EnterpriseSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseSearchBar.swift; sourceTree = "<group>"; };
 		387A8A43244B5273001704D5 /* EnterpriseSearchBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseSearchBarController.swift; sourceTree = "<group>"; };
+		387A8A45244B7797001704D5 /* Extensio+UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensio+UIWindow.swift"; sourceTree = "<group>"; };
 		387EE998244A4CF7004F0883 /* EnterpriseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseTableViewCell.swift; sourceTree = "<group>"; };
 		387EE99A244A4DA8004F0883 /* EnterpriseTableViewCellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseTableViewCellStyle.swift; sourceTree = "<group>"; };
 		387EE99D244A509B004F0883 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			children = (
 				38B9490F2449F04B00127BB0 /* Extension+UIColor.swift */,
 				38B949152449F47D00127BB0 /* Extension+NSNotification.swift */,
+				387A8A45244B7797001704D5 /* Extensio+UIWindow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				386D0825244900BE00A465A8 /* AppDelegate.swift in Sources */,
 				3885A7EB244A03660072B65D /* EnterpriseTableViewController.swift in Sources */,
 				38B949142449F31A00127BB0 /* EnterpriseView.swift in Sources */,
+				387A8A46244B7797001704D5 /* Extensio+UIWindow.swift in Sources */,
 				383AB70A244A165D00EDFC5F /* APIAcess.swift in Sources */,
 				387EE99B244A4DA8004F0883 /* EnterpriseTableViewCellStyle.swift in Sources */,
 				38B949122449F2E100127BB0 /* EnterpriseViewController.swift in Sources */,

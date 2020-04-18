@@ -44,7 +44,7 @@ extension EnterpriseView: IoasyCustomView{
         subviews(enterpriseHeader,enterpriseContentView,enterpriseSearch, enterpriseQuantity)
             
         enterpriseHeader.Top == safeAreaLayoutGuide.Top
-        enterpriseHeader.right(0).left(0).height(148)
+        enterpriseHeader.right(0).left(0).height(148 - 118)
     
         enterpriseContentView.Top == enterpriseHeader.Bottom
         enterpriseContentView.right(0.0).left(0.0).bottom(0.0)
@@ -70,9 +70,37 @@ extension EnterpriseView: IoasyCustomView{
     
     func addNotification(){
         NotificationCenter.default.addObserver(self, selector: #selector(reloadQuantity), name: .ioasysReloadEnterpriseQuantity, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc private func reloadQuantity(){
         enterpriseQuantity.text = NSLocalizedString("\(model.enterpriseTotal) resultados encontrados", comment: "")
     }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        print("\n apareceu")
+//        reduceHeader()
+    }
+
+    @objc func keyboardWillHide(_ notification: Notification) {
+        print("\n escondeu")
+//        resetHeader()
+    }
+    
+    func resetHeader() {
+        UIView.animate(withDuration: 1.0, delay: 0.0,options: [], animations: {
+            self.enterpriseHeader.heightConstraint?.constant += 118
+            self.enterpriseHeader.layoutIfNeeded()
+        }, completion: nil)
+    }
+
+    func reduceHeader() {
+        UIView.animate(withDuration: 1.0, delay: 0.0,options: [], animations: {
+            self.enterpriseHeader.heightConstraint?.constant -= 118
+            self.enterpriseHeader.layoutIfNeeded()
+        }, completion: nil)
+     }
+    
+    
 }

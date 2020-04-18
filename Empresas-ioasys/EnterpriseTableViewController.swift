@@ -34,6 +34,7 @@ extension EnterpriseTableViewController{
         self.tableView.dataSource = self
         tableView.register(EnterpriseTableViewCell.self, forCellReuseIdentifier: "enterpriseCell")
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableView.keyboardDismissMode = .none
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

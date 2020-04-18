@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Stevia
 
-class EnterpriseSearchBar: UIView {
+class EnterpriseSearchBar: UIView, UITextFieldDelegate{
     init(){
         super.init(frame: .zero)
         autolayout()
@@ -53,6 +53,7 @@ extension EnterpriseSearchBar: IoasyCustomView{
 
 extension EnterpriseSearchBar{
     func textFieldTarget(){
+        self.searchTextField.delegate = self
         searchTextField.addTarget(self, action: #selector(searchTextFieldEdited), for: .editingChanged)
     }
     
