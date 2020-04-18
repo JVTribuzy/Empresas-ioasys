@@ -1,5 +1,5 @@
 //
-//  EnterpriseSearchBarView.swift
+//  EnterpriseSearchBar.swift
 //  Empresas-ioasys
 //
 //  Created by João Tribuzy on 18/04/20.
@@ -11,6 +11,11 @@ import UIKit
 import Stevia
 
 class EnterpriseSearchBar: UIView {
+    
+    var model: EnterpriseModelController = {
+        return EnterpriseModelController.shared
+    }()
+    
     init(){
         super.init(frame: .zero)
         autolayout()
@@ -51,12 +56,3 @@ extension EnterpriseSearchBar: IoasyCustomView{
     }
 }
 
-extension EnterpriseSearchBar{
-    func textFieldTarget(){
-        searchTextField.addTarget(self, action: #selector(searchTextFieldEdited), for: .editingChanged)
-    }
-    
-    @objc private func searchTextFieldEdited(){
-        
-    }
-}

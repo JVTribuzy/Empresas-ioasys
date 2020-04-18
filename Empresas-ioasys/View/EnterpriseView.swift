@@ -26,7 +26,7 @@ class EnterpriseView: UIView{
     
     public let enterpriseContentView: UIView = EnterpriseContentView()
     public let enterpriseHeader: UIImageView = UIImageView()
-    public let enterpriseSearch: UIView = EnterpriseSearchBarView()
+    public let enterpriseSearch: UIView = EnterpriseSearchBar()
 }
 
 extension EnterpriseView: IoasyCustomView{
