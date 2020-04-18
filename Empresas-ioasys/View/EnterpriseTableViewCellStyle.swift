@@ -16,7 +16,8 @@ extension EnterpriseTableViewCell: IoasyCustomView{
         selectedView.backgroundColor = .clear
         self.selectedBackgroundView = selectedView
         
-        //enterpriseName
+        elipseImageView.image = UIImage(named: "elipse")
+        
         enterpriseName.numberOfLines = 0
         enterpriseName.lineBreakMode = .byWordWrapping
         enterpriseName.textAlignment = .center
@@ -29,9 +30,13 @@ extension EnterpriseTableViewCell: IoasyCustomView{
     
         subviews(
             enterpriseView.subviews(
+                elipseImageView,
                 enterpriseName
             )
         )
+        
+        elipseImageView.bottomAnchor.constraint(equalTo: enterpriseName.topAnchor, constant: -5).isActive = true
+        elipseImageView.height(26).width(52).centerHorizontally()
         
         enterpriseView.left(16).right(16).top(4).bottom(4)
         enterpriseView.layer.cornerRadius = 5

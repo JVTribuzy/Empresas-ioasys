@@ -30,13 +30,15 @@ class EnterpriseTableViewCell: UITableViewCell{
     
     let enterpriseView: UIView = UIView()
     let enterpriseName: UILabel = UILabel()
+    
+    let elipseImageView: UIImageView = UIImageView()
 }
 
 extension EnterpriseTableViewCell{
     public func fill(_ enterprise: Enterprise){
         self.enterprise = enterprise
         
-        enterpriseView.backgroundColor = UIColor.ioasysBlueCell
+        enterpriseView.backgroundColor = enterprise.cellColor
         
         enterpriseName.text = enterprise.enterpriseName.uppercased()
     }

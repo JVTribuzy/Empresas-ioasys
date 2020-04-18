@@ -23,16 +23,24 @@ class EnterpriseContentView: UIView{
     }
     
     private let enterpriseTableViewController: UITableViewController = EnterpriseTableViewController(style: .plain)
+    private let enterpriseIndicator: UILabel = UILabel()
 }
 
 extension EnterpriseContentView: IoasyCustomView{
     func autolayout() {
         // enterpriseTableViewController
         subviews(enterpriseTableViewController.view)
+        enterpriseIndicator.left(16).right(16).top(0)
+        
         enterpriseTableViewController.view.left(0).top(40).right(0).bottom(0)
     }
     
     func style() {
-        
+        enterpriseIndicator.numberOfLines = 0
+        enterpriseIndicator.lineBreakMode = .byWordWrapping
+        enterpriseIndicator.textAlignment = .left
+        enterpriseIndicator.font = UIFont(name: "Rubik-Regular", size: 18)
+        enterpriseIndicator.textColor = .black
+        enterpriseIndicator.text = "asdasdasasdad"
     }
 }

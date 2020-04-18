@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - Enterpris
-struct Enterprise: Decodable{
+struct Enterprise{
     let id: Int
     let emailEnterprise: String?
     let facebook, twitter, linkedin: URL?
@@ -21,8 +22,10 @@ struct Enterprise: Decodable{
     let value, sharePrice: Int
     let enterpriseType: EnterpriseType
     
+    let cellColor: UIColor
+    
     init(id: Int, emailEnterprise: String?, facebook: URL?, twitter: URL?, linkedin: URL?,
-         phone: String?, ownEnterprise: Bool, enterpriseName: String, photo: URL?, enterprisDescription: String, city: String, country: String, value: Int, sharePrice: Int, enterpriseType: EnterpriseType) {
+         phone: String?, ownEnterprise: Bool, enterpriseName: String, photo: URL?, enterprisDescription: String, city: String, country: String, value: Int, sharePrice: Int, enterpriseType: EnterpriseType, cellColor: UIColor) {
         self.id = id
         self.emailEnterprise = emailEnterprise
         self.facebook = facebook
@@ -38,6 +41,8 @@ struct Enterprise: Decodable{
         self.value = value
         self.sharePrice = sharePrice
         self.enterpriseType = enterpriseType
+        
+        self.cellColor = cellColor
     }
 }
 

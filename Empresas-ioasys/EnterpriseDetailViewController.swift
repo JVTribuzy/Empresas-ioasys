@@ -27,7 +27,7 @@ class EnterpriseDetailViewController: UIViewController{
         fatalError("init(coder:) has not been implemented")
     }
     
-    private var enterprise: Enterprise? = nil
+    public var enterprise: Enterprise? = nil
     
     public var headerView: UIView = UIView()
     public var backButton: UIButton = UIButton()
@@ -38,6 +38,8 @@ class EnterpriseDetailViewController: UIViewController{
     public var cellCopyViewLabel: UILabel = UILabel()
     
     public var descriptionLabel: UILabel = UILabel()
+    
+    let elipseImageView: UIImageView = UIImageView()
     
 }
 

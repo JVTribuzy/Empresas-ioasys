@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 class EnterpriseModelController {
     public static let shared = EnterpriseModelController()
 
     public var enterprises: [Enterprise]
     public var enterpriseToDetail: Enterprise? = nil
+    public var enterpriseTotal: Int = 0
 
     private init() {
         self.enterprises = []
@@ -38,8 +40,23 @@ class EnterpriseModelController {
                 let content = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String : Any]
                 let enterprise: Array<[String : Any]> = content["enterprises"] as! Array<[String : Any]>
                 
+                var colorId: Int = 0
                 for cachedEnterprise in enterprise{
                     let enterpriseType: [String : Any] = cachedEnterprise["enterprise_type"] as! [String : Any]
+                    var colorToSet: UIColor = .white
+                    switch colorId {
+                    case 0:
+                        colorToSet = UIColor.ioasysBlueCell
+                        colorId = 1
+                    case 1:
+                        colorToSet = UIColor.ioasysRedCell
+                        colorId = 2
+                    case 2:
+                        colorToSet = UIColor.ioasysGreenCell
+                        colorId = 0
+                    default:
+                        break
+                    }
                     let contentEnterprise: Enterprise = Enterprise(id: cachedEnterprise["id"] as! Int,
                                                                    emailEnterprise: cachedEnterprise["email_enterprise"] as? String,
                                                                    facebook: cachedEnterprise["facebook"] as? URL,
@@ -55,9 +72,11 @@ class EnterpriseModelController {
                                                                    value: cachedEnterprise["value"] as! Int,
                                                                    sharePrice: cachedEnterprise["share_price"] as! Int,
                                                                    enterpriseType: EnterpriseType(id: enterpriseType["id"] as! Int,
-                                                                                                  enterpriseTypeName: enterpriseType["enterprise_type_name"] as! String)
+                                                                                                  enterpriseTypeName: enterpriseType["enterprise_type_name"] as! String),
+                                                                   cellColor: colorToSet
                                                                     )
                     self.enterprises.append(contentEnterprise)
+                    self.enterpriseTotal = self.enterprises.count
                     NotificationCenter.default.post(name: .ioasysReloadEnterpriseTableView, object: nil)
                 }
             } catch {}

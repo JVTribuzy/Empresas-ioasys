@@ -32,7 +32,7 @@ extension EnterpriseView: IoasyCustomView{
     func autolayout() {
         // enterpriseContentView
         subviews(enterpriseContentView)
-        enterpriseContentView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 30).isActive = true
+        enterpriseContentView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 148).isActive = true
         enterpriseContentView.right(0.0).left(0.0).bottom(0.0)
     }
     

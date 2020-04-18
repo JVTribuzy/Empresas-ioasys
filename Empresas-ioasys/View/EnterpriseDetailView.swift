@@ -13,7 +13,7 @@ import Stevia
 extension EnterpriseDetailViewController: IoasyCustomView{
     func autolayout() {
         view.subviews(headerView.subviews(backButton.subviews(backArrow),enterpriseTitle),
-                      cellCopyView.subviews(cellCopyViewLabel),
+                      cellCopyView.subviews(elipseImageView,cellCopyViewLabel),
                       descriptionLabel
         )
         headerView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
@@ -28,6 +28,9 @@ extension EnterpriseDetailViewController: IoasyCustomView{
         cellCopyView.right(0).left(0)
         
         cellCopyViewLabel.left(8).top(64).right(8).bottom(34)
+        
+        elipseImageView.bottomAnchor.constraint(equalTo: cellCopyViewLabel.topAnchor, constant: -5).isActive = true
+        elipseImageView.height(26).width(52).centerHorizontally()
         
         descriptionLabel.topAnchor.constraint(equalTo: cellCopyView.bottomAnchor, constant: 24).isActive = true
         descriptionLabel.left(16).right(16)
@@ -56,7 +59,8 @@ extension EnterpriseDetailViewController: IoasyCustomView{
         cellCopyViewLabel.font = UIFont(name: "Rubik-Bold", size: 18)
         cellCopyViewLabel.textColor = .white
         
-        cellCopyView.backgroundColor = UIColor.ioasysBlueCell
+        cellCopyView.backgroundColor = self.enterprise?.cellColor
+        elipseImageView.image = UIImage(named: "elipse")
         
         descriptionLabel.numberOfLines = 0
         descriptionLabel.lineBreakMode = .byWordWrapping
