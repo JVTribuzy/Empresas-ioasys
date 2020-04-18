@@ -41,6 +41,8 @@ extension EnterpriseTableViewCell{
         enterpriseView.backgroundColor = enterprise.cellColor
         
         enterpriseName.text = enterprise.enterpriseName.uppercased()
+        
+        NotificationCenter.default.post(name: .ioasysReloadEnterpriseQuantity, object: nil)
     }
     
     func setupViewTouch(){

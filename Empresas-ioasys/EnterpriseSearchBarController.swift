@@ -18,37 +18,42 @@ extension EnterpriseSearchBar{
         
         model.filteredEnterprises.removeAll()
         
-        guard searchText != " " || searchText != "" else {
+        if searchText == " " || searchText == "" {
             print("Empty Search Bar")
             model.filteredEnterprises.removeAll()
             model.shouldShowSearchResults = false
+            model.enterpriseTotal = model.enterprises.count
             DispatchQueue.main.async{
+                NotificationCenter.default.post(name: .ioasysReloadEnterpriseQuantity, object: nil)
                 NotificationCenter.default.post(name: .ioasysReloadEnterpriseTableView, object: nil)
             }
             return
-        }
-        
-        model.shouldShowSearchResults = true
-        
-        model.filteredEnterprises.removeAll()
-        
-        print("\n\n\n\n\n\n\n")
-        for item in model.enterprises {
-            let Text = searchText!.lowercased()
-            var isArrayContain = false
+        } else{
+            model.shouldShowSearchResults = true
             
-            if item.enterpriseName.lowercased().contains(Text){
-                isArrayContain = true
-            } else{
-                isArrayContain = false
-            }
+            model.filteredEnterprises.removeAll()
             
-            if isArrayContain == true{
-                model.filteredEnterprises.append(item)
-            }
-            
-            DispatchQueue.main.async{
-                NotificationCenter.default.post(name: .ioasysReloadEnterpriseTableView, object: nil)
+            print("\n\n\n\n\n\n\n")
+            for item in model.enterprises {
+                let Text = searchText!.lowercased()
+                var isArrayContain = false
+                
+                if item.enterpriseName.lowercased().contains(Text){
+                    isArrayContain = true
+                } else{
+                    isArrayContain = false
+                }
+                
+                if isArrayContain == true{
+                    model.filteredEnterprises.append(item)
+                }
+                
+                self.model.enterpriseTotal = self.model.filteredEnterprises.count
+                
+                DispatchQueue.main.async{
+                    NotificationCenter.default.post(name: .ioasysReloadEnterpriseQuantity, object: nil)
+                    NotificationCenter.default.post(name: .ioasysReloadEnterpriseTableView, object: nil)
+                }
             }
         }
     }
