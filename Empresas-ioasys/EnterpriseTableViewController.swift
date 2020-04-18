@@ -47,7 +47,7 @@ extension EnterpriseTableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "enterpriseCell", for: indexPath) as! EnterpriseTableViewCell
         
-        if model.shouldShowSearchResults{
+        if model.shouldShowSearchResults && model.filteredEnterprises.count != 0{
             cell.fill(model.filteredEnterprises[indexPath.row])
         } else{
             cell.fill(model.enterprises[indexPath.row])

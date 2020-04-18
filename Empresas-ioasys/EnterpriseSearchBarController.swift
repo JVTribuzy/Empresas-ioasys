@@ -30,20 +30,27 @@ extension EnterpriseSearchBar{
         
         model.shouldShowSearchResults = true
         
+        model.filteredEnterprises.removeAll()
+        
+        print("\n\n\n\n\n\n\n")
         for item in model.enterprises {
             let Text = searchText!.lowercased()
-            let isArrayContain = item.enterpriseName.lowercased().range(of: Text)
+            var isArrayContain = false
             
-            if isArrayContain != nil{
-                print("true")
+            if item.enterpriseName.lowercased().contains(Text){
+                isArrayContain = true
+            } else{
+                isArrayContain = false
+            }
+            
+            if isArrayContain == true{
                 model.filteredEnterprises.append(item)
-                DispatchQueue.main.async{
-                    NotificationCenter.default.post(name: .ioasysReloadEnterpriseTableView, object: nil)
-                }
+            }
+            
+            DispatchQueue.main.async{
+                NotificationCenter.default.post(name: .ioasysReloadEnterpriseTableView, object: nil)
             }
         }
-        
-        
     }
 }
  
