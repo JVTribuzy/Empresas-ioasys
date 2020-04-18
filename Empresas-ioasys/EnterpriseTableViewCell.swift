@@ -10,10 +10,16 @@ import Foundation
 import UIKit
 
 class EnterpriseTableViewCell: UITableViewCell{
+    
+    var model: EnterpriseModelController = {
+        return EnterpriseModelController.shared
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.autolayout()
         self.style()
+        setupViewTouch()
     }
     
     required init?(coder: NSCoder) {
@@ -33,5 +39,17 @@ extension EnterpriseTableViewCell{
         enterpriseView.backgroundColor = UIColor.ioasysBlueCell
         
         enterpriseName.text = enterprise.enterpriseName.uppercased()
+    }
+    
+    func setupViewTouch(){
+        self.contentView.isUserInteractionEnabled = true
+        self.contentView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(presentEnterpriseDetailViewControllerNotificationReceived)))
+    }
+    
+    @objc private func presentEnterpriseDetailViewControllerNotificationReceived(){
+        model.enterpriseToDetail = self.enterprise
+        DispatchQueue.main.async{
+            NotificationCenter.default.post(name: .ioasysPresenEnterpriseDetailViewController, object: nil)
+        }
     }
 }

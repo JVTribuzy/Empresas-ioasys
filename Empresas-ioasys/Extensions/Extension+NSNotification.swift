@@ -11,4 +11,5 @@ import Foundation
 extension NSNotification.Name{
     public static let ioasysGoToEnterpriseViewController = NSNotification.Name("com.tribuzy.empresas-ioasys.ioasysGoToEnterpriseViewController")
     public static let ioasysReloadEnterpriseTableView = NSNotification.Name("com.tribuzy.empresas-ioasys.ioasysReloadEnterpriseTableView")
+    public static let ioasysPresenEnterpriseDetailViewController = NSNotification.Name("com.tribuzy.empresas-ioasys.ioasysPresenEnterpriseDetailViewController")
 }

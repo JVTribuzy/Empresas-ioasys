@@ -36,7 +36,7 @@ extension EnterpriseTableViewCell: IoasyCustomView{
         enterpriseView.left(16).right(16).top(4).bottom(4)
         enterpriseView.layer.cornerRadius = 5
         
-        enterpriseName.left(0).top(64).right(8).bottom(34)
+        enterpriseName.left(8).top(64).right(8).bottom(34)
         
     }
 }

@@ -12,6 +12,7 @@ class EnterpriseModelController {
     public static let shared = EnterpriseModelController()
 
     public var enterprises: [Enterprise]
+    public var enterpriseToDetail: Enterprise? = nil
 
     private init() {
         self.enterprises = []

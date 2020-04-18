@@ -31,6 +31,8 @@
 		3885A7EB244A03660072B65D /* EnterpriseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885A7EA244A03660072B65D /* EnterpriseTableViewController.swift */; };
 		3885A7ED244A04880072B65D /* EnterpriseContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885A7EC244A04880072B65D /* EnterpriseContentView.swift */; };
 		38A273F92449087D00A79613 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 38A273F82449087D00A79613 /* Stevia */; };
+		38B7904D244A7032001F7B56 /* EnterpriseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7904C244A7032001F7B56 /* EnterpriseDetailViewController.swift */; };
+		38B7904F244A7047001F7B56 /* EnterpriseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7904E244A7047001F7B56 /* EnterpriseDetailView.swift */; };
 		38B9490B244965C300127BB0 /* IoasysCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B9490A244965C300127BB0 /* IoasysCustomView.swift */; };
 		38B9490D2449EE4A00127BB0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B9490C2449EE4A00127BB0 /* LoginView.swift */; };
 		38B949102449F04B00127BB0 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B9490F2449F04B00127BB0 /* Extension+UIColor.swift */; };
@@ -65,6 +67,8 @@
 		387EE9A6244A509B004F0883 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		3885A7EA244A03660072B65D /* EnterpriseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseTableViewController.swift; sourceTree = "<group>"; };
 		3885A7EC244A04880072B65D /* EnterpriseContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseContentView.swift; sourceTree = "<group>"; };
+		38B7904C244A7032001F7B56 /* EnterpriseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseDetailViewController.swift; sourceTree = "<group>"; };
+		38B7904E244A7047001F7B56 /* EnterpriseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseDetailView.swift; sourceTree = "<group>"; };
 		38B9490A244965C300127BB0 /* IoasysCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoasysCustomView.swift; sourceTree = "<group>"; };
 		38B9490C2449EE4A00127BB0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		38B9490F2449F04B00127BB0 /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 				38B949112449F2E100127BB0 /* EnterpriseViewController.swift */,
 				3885A7EA244A03660072B65D /* EnterpriseTableViewController.swift */,
 				387EE998244A4CF7004F0883 /* EnterpriseTableViewCell.swift */,
+				38B7904C244A7032001F7B56 /* EnterpriseDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				38B949132449F31A00127BB0 /* EnterpriseView.swift */,
 				3885A7EC244A04880072B65D /* EnterpriseContentView.swift */,
 				387EE99A244A4DA8004F0883 /* EnterpriseTableViewCellStyle.swift */,
+				38B7904E244A7047001F7B56 /* EnterpriseDetailView.swift */,
 				38B949092449659E00127BB0 /* Archiecture */,
 				387EE99C244A507F004F0883 /* Fonts */,
 				386D082A244900BE00A465A8 /* Main.storyboard */,
@@ -292,6 +298,8 @@
 				38B949162449F47D00127BB0 /* Extension+NSNotification.swift in Sources */,
 				38B9490B244965C300127BB0 /* IoasysCustomView.swift in Sources */,
 				386D0829244900BE00A465A8 /* LoginViewController.swift in Sources */,
+				38B7904D244A7032001F7B56 /* EnterpriseDetailViewController.swift in Sources */,
+				38B7904F244A7047001F7B56 /* EnterpriseDetailView.swift in Sources */,
 				3885A7ED244A04880072B65D /* EnterpriseContentView.swift in Sources */,
 				383AB705244A0C7C00EDFC5F /* Enterprise.swift in Sources */,
 				387EE999244A4CF7004F0883 /* EnterpriseTableViewCell.swift in Sources */,

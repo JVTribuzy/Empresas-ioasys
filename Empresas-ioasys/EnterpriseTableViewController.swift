@@ -30,6 +30,8 @@ class EnterpriseTableViewController: UITableViewController {
 
 extension EnterpriseTableViewController{
     func setupTableView(){
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         tableView.register(EnterpriseTableViewCell.self, forCellReuseIdentifier: "enterpriseCell")
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
@@ -45,16 +47,24 @@ extension EnterpriseTableViewController{
         
         return cell
     }
+    
 }
 
 extension EnterpriseTableViewController{
     private func addNotifications(){
         NotificationCenter.default.addObserver(self, selector: #selector(reloadEnterpriseTableViewNotificationReceived(_:)), name: .ioasysReloadEnterpriseTableView, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(presentEnterpriseDetailViewController(_:)), name: .ioasysPresenEnterpriseDetailViewController, object: nil)
     }
     
     @objc private func reloadEnterpriseTableViewNotificationReceived(_ notification: NSNotification){
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+        
+    @objc private func presentEnterpriseDetailViewController(_ notification: Notification){
+        let enterpriseDetailViewController = EnterpriseDetailViewController(enterprise: model.enterpriseToDetail!)
+        enterpriseDetailViewController.modalPresentationStyle = .fullScreen
+        present(enterpriseDetailViewController, animated: true)
     }
 }
