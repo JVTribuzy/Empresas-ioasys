@@ -36,11 +36,26 @@ extension EnterpriseViewController{
         
     @objc private func presentEnterpriseDetailViewController(_ notification: Notification){
         let enterpriseDetailViewController = EnterpriseDetailViewController(enterprise: model.enterpriseToDetail!)
-        enterpriseDetailViewController.modalPresentationStyle = .fullScreen
-        present(enterpriseDetailViewController, animated: true)
+        enterpriseDetailViewController.modalPresentationStyle = .custom
+        
+        let transition = CATransition()
+        transition.duration = 0.2
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
+        
+        present(enterpriseDetailViewController, animated: false)
     }
     
     @objc private func dismissEnterpriseDetailViewController(_ notification: Notification){
-        dismiss(animated: true, completion: nil)
+        let transition = CATransition()
+        transition.duration = 0.2
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromLeft
+        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        view.window?.layer.add(transition, forKey: kCATransition)
+        
+        dismiss(animated: false, completion: nil)
     }
 }
