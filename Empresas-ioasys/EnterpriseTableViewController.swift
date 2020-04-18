@@ -37,13 +37,21 @@ extension EnterpriseTableViewController{
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.enterprises.count
+        if model.shouldShowSearchResults{
+            return model.filteredEnterprises.count
+        } else{
+            return model.enterprises.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "enterpriseCell", for: indexPath) as! EnterpriseTableViewCell
         
-        cell.fill(model.enterprises[indexPath.row])
+        if model.shouldShowSearchResults{
+            cell.fill(model.filteredEnterprises[indexPath.row])
+        } else{
+            cell.fill(model.enterprises[indexPath.row])
+        }
         
         return cell
     }

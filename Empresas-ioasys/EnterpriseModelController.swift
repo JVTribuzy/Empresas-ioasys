@@ -12,13 +12,13 @@ import UIKit
 class EnterpriseModelController {
     public static let shared = EnterpriseModelController()
 
-    public var enterprises: [Enterprise]
+    public var enterprises: [Enterprise] = []
+    public var filteredEnterprises: [Enterprise] = []
+    public var shouldShowSearchResults: Bool = false
     public var enterpriseToDetail: Enterprise? = nil
     public var enterpriseTotal: Int = 0
 
     private init() {
-        self.enterprises = []
-        
         getEnterprises()
     }
     

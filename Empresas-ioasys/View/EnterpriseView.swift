@@ -25,15 +25,24 @@ class EnterpriseView: UIView{
     deinit {}
     
     public let enterpriseContentView: UIView = EnterpriseContentView()
+    public let enterpriseHeader: UIImageView = UIImageView()
+    public let enterpriseSearch: UIView = EnterpriseSearchBarView()
 }
 
 extension EnterpriseView: IoasyCustomView{
     
     func autolayout() {
         // enterpriseContentView
-        subviews(enterpriseContentView)
-        enterpriseContentView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 148).isActive = true
+        subviews(enterpriseHeader,enterpriseContentView,enterpriseSearch)
+            
+        enterpriseHeader.Top == safeAreaLayoutGuide.Top
+        enterpriseHeader.right(0).left(0).height(148)
+    
+        enterpriseContentView.Top == enterpriseHeader.Bottom
         enterpriseContentView.right(0.0).left(0.0).bottom(0.0)
+        
+        enterpriseSearch.right(16).left(16).height(48)
+        enterpriseSearch.Top == enterpriseHeader.Bottom - 24
     }
     
     func style() {
