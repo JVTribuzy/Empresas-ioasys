@@ -12,12 +12,15 @@ import Stevia
 
 extension EnterpriseDetailViewController: IoasyCustomView{
     func autolayout() {
-        view.subviews(headerView.subviews(enterpriseTitle),
+        view.subviews(headerView.subviews(backButton.subviews(backArrow),enterpriseTitle),
                       cellCopyView.subviews(cellCopyViewLabel),
                       descriptionLabel
         )
         headerView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
         headerView.left(0).right(0).height(72)
+        
+        backButton.left(16).width(40).height(40).centerVertically()
+        backArrow.height(14).width(18).centerInContainer()
         
         enterpriseTitle.left(8).right(8).top(22).bottom(22)
         
@@ -40,6 +43,12 @@ extension EnterpriseDetailViewController: IoasyCustomView{
         enterpriseTitle.textAlignment = .center
         enterpriseTitle.font = UIFont(name: "Rubik-Bold", size: 20)
         enterpriseTitle.textColor = .black
+        
+        backButton.backgroundColor = UIColor.ioasysDetailBackButton
+        backButton.layer.cornerRadius = 4
+        backButton.isUserInteractionEnabled = true
+        
+        backArrow.image = UIImage(named: "back-arrow")
         
         cellCopyViewLabel.numberOfLines = 0
         cellCopyViewLabel.lineBreakMode = .byWordWrapping

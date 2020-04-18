@@ -25,7 +25,7 @@ class EnterpriseTableViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    deinit {}
+    deinit { NotificationCenter.default.removeObserver(self) }
 }
 
 extension EnterpriseTableViewController{
@@ -53,18 +53,11 @@ extension EnterpriseTableViewController{
 extension EnterpriseTableViewController{
     private func addNotifications(){
         NotificationCenter.default.addObserver(self, selector: #selector(reloadEnterpriseTableViewNotificationReceived(_:)), name: .ioasysReloadEnterpriseTableView, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(presentEnterpriseDetailViewController(_:)), name: .ioasysPresenEnterpriseDetailViewController, object: nil)
     }
     
     @objc private func reloadEnterpriseTableViewNotificationReceived(_ notification: NSNotification){
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-    }
-        
-    @objc private func presentEnterpriseDetailViewController(_ notification: Notification){
-        let enterpriseDetailViewController = EnterpriseDetailViewController(enterprise: model.enterpriseToDetail!)
-        enterpriseDetailViewController.modalPresentationStyle = .fullScreen
-        present(enterpriseDetailViewController, animated: true)
     }
 }
