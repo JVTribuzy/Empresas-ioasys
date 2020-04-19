@@ -36,11 +36,15 @@ class LoginView: UIView{
     public let emailLabel: UILabel = UILabel()
     public let emailTextField: UITextField = UITextField()
     public let emailView: UIView = UIView()
+    private let emailWrong: UIImageView = UIImageView()
     
     private let passwordLabel: UILabel = UILabel()
     public let passwordTextField: UITextField = UITextField()
     public let passwordView: UIView = UIView()
     private let visibilityButton: UIButton = UIButton()
+    private let passwordWrong: UIImageView = UIImageView()
+    
+    private let wrongInput: UILabel = UILabel()
     
     public let buttonToEnterprise: UIButton = UIButton()
     
@@ -53,26 +57,31 @@ extension LoginView: IoasyCustomView{
     
     func autolayout() {
         
-        subviews(topImageView, emailLabel, emailView.subviews(emailTextField), passwordLabel,passwordView.subviews(passwordTextField, visibilityButton),buttonToEnterprise)
+        subviews(topImageView, emailLabel, emailView.subviews(emailTextField, emailWrong), passwordLabel,passwordView.subviews(passwordTextField, visibilityButton, passwordWrong), wrongInput, buttonToEnterprise)
         
         topImageView.right(0).left(0).top(0).height(240)
         
         emailLabel.right(20).left(20).height(18)
         emailLabel.Top == topImageView.Bottom + 28
 
-        emailView.right(16).left(16).height(40)
+        emailView.right(16).left(16).height(48)
         emailView.Top == emailLabel.Bottom + 4
         emailTextField.right(16).left(16).centerVertically()
+        emailWrong.width(20).height(20).right(13).centerVertically()
         
         passwordLabel.Top == emailView.Bottom + 16
         passwordLabel.right(20).left(20).height(18)
         
-        passwordView.right(16).left(16).height(40)
+        passwordView.right(16).left(16).height(48)
         passwordView.Top == passwordLabel.Bottom + 4
         visibilityButton.width(22).height(15).right(13).centerVertically()
         visibilityButtonTarget()
         passwordTextField.left(16).centerVertically()
         passwordTextField.Right == visibilityButton.Left + 13
+        passwordWrong.width(20).height(20).right(13).centerVertically()
+        
+        wrongInput.right(20).left(20).height(16)
+        wrongInput.Top == passwordView.Bottom + 4
 
         buttonToEnterpriseTarget()
         buttonToEnterprise.Top == passwordView.Bottom + 40
@@ -109,13 +118,28 @@ extension LoginView: IoasyCustomView{
         passwordTextField.placeholder = NSLocalizedString("", comment: "")
         passwordTextField.isSecureTextEntry = true
         
+        
         visibilityButton.setBackgroundImage(UIImage(named: "eye"), for: .normal)
+        emailWrong.image = UIImage(named: "wrong")
+        emailWrong.isHidden = true
+        passwordWrong.image = UIImage(named: "wrong")
+        passwordWrong.isHidden = true
         
         emailView.backgroundColor = UIColor.ioasysSearchBarColor
         emailView.layer.cornerRadius = 4
+        emailView.layer.borderWidth = 1
+        emailView.layer.borderColor = UIColor.ioasysSearchBarColor.cgColor
         
         passwordView.backgroundColor = UIColor.ioasysSearchBarColor
         passwordView.layer.cornerRadius = 4
+        passwordView.layer.borderWidth = 1
+        passwordView.layer.borderColor = UIColor.ioasysSearchBarColor.cgColor
+        
+        wrongInput.textAlignment = .right
+        wrongInput.font = UIFont(name: "Rubik-Regular", size: 12)
+        wrongInput.textColor = .red
+        wrongInput.isHidden = true
+        wrongInput.text = NSLocalizedString("Credenciais incorretas", comment: "")
         
         buttonToEnterprise.text((NSLocalizedString("entrar", comment: "")).uppercased())
         buttonToEnterprise.backgroundColor = UIColor.ioasysLoginButtonColor
@@ -144,6 +168,27 @@ extension LoginView{
 extension LoginView{
     func addNotification(){
         NotificationCenter.default.addObserver(self, selector: #selector(hideActivityIndicator), name: .ioasysHideFullScreenActivityIndicator, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(wrongPassword), name: .ioasysWrongPassword, object: nil)
+    }
+    
+    @objc private func wrongPassword(){
+        emailView.layer.borderColor = UIColor.red.cgColor
+        passwordView.layer.borderColor = UIColor.red.cgColor
+        wrongInput.isHidden = false
+        emailWrong.isHidden = false
+        passwordWrong.isHidden = false
+        visibilityButton.isHidden = true
+        visibilityButton.isUserInteractionEnabled = false
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+            self.emailView.layer.borderColor = UIColor.ioasysSearchBarColor.cgColor
+            self.passwordView.layer.borderColor = UIColor.ioasysSearchBarColor.cgColor
+            self.wrongInput.isHidden = true
+            self.emailWrong.isHidden = true
+            self.passwordWrong.isHidden = true
+            self.visibilityButton.isHidden = false
+            self.visibilityButton.isUserInteractionEnabled = true
+        }
     }
     
     private func showActivityIndicatory() {

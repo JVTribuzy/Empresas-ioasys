@@ -42,6 +42,7 @@ class UserModelController {
                 
                 guard self.successAuth == true else{
                     DispatchQueue.main.async {
+                        NotificationCenter.default.post(name: .ioasysWrongPassword, object: nil)
                         NotificationCenter.default.post(name: .ioasysHideFullScreenActivityIndicator, object: nil)
                     }
                     return
