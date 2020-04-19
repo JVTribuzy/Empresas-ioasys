@@ -33,6 +33,11 @@ class EnterpriseView: UIView{
     
     public let enterpriseContentView: UIView = EnterpriseContentView()
     public let enterpriseHeader: UIImageView = UIImageView()
+    
+    public let logo1: UIImageView = UIImageView()
+    public let logo2: UIImageView = UIImageView()
+    public let logo3: UIImageView = UIImageView()
+    public let logo4: UIImageView = UIImageView()
     public let enterpriseSearch: UIView = EnterpriseSearchBar()
 }
 
@@ -40,10 +45,25 @@ extension EnterpriseView: IoasyCustomView{
     
     func autolayout() {
         // enterpriseContentView
-        subviews(enterpriseHeader,enterpriseContentView,enterpriseSearch)
+        subviews(enterpriseHeader.subviews(logo1, logo2, logo2, logo3, logo4),enterpriseContentView,enterpriseSearch)
             
-        enterpriseHeader.Top == safeAreaLayoutGuide.Top
-        enterpriseHeader.right(0).left(0).height(148 - 118)
+        enterpriseHeader.right(0).top(0).left(0).height(148)
+        
+        logo1.width(119).height(94).top(82).left(-31)
+        let radians1: CGFloat = 27.38 * (.pi / 180)
+        logo1.transform = CGAffineTransform(rotationAngle: radians1)
+        
+        logo2.width(204.74).height(161.73).top(-70).left(27)
+        let radians2: CGFloat = 132.01 * (.pi / 180)
+        logo2.transform = CGAffineTransform(rotationAngle: radians2)
+        
+        logo3.width(119).height(94).top(76).right(20.02)
+        let radians3: CGFloat = 132.01 * (.pi / 180)
+        logo3.transform = CGAffineTransform(rotationAngle: radians3)
+        
+        logo4.width(119).height(94).top(0).right(-39.98)
+        let radians4: CGFloat = 163.31 * (.pi / 180)
+        logo4.transform = CGAffineTransform(rotationAngle: radians4)
     
         enterpriseContentView.Top == enterpriseHeader.Bottom
         enterpriseContentView.right(0.0).left(0.0).bottom(0.0)
@@ -56,8 +76,18 @@ extension EnterpriseView: IoasyCustomView{
     func style() {
         backgroundColor = UIColor.ioasysEnterpriseScreenBackgroundColor
         
-        // enterpriseContentView
         enterpriseContentView.backgroundColor = .white
+        
+        logo1.image = UIImage(named: "logo_login")
+        logo1.alpha = 0.2
+        logo2.image = UIImage(named: "logo_login")
+        logo2.alpha = 0.2
+        logo3.image = UIImage(named: "logo_login")
+        logo3.alpha = 0.2
+        logo4.image = UIImage(named: "logo_login")
+        logo4.alpha = 0.2
+        
+        enterpriseHeader.image = UIImage(named: "header-enterprise")
         
     }
     
@@ -67,28 +97,32 @@ extension EnterpriseView: IoasyCustomView{
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
-        print("\n apareceu")
-//        reduceHeader()
+        reduceHeader()
     }
 
     @objc func keyboardWillHide(_ notification: Notification) {
-        print("\n escondeu")
-//        resetHeader()
+        resetHeader()
     }
     
     func resetHeader() {
-        UIView.animate(withDuration: 1.0, delay: 0.0,options: [], animations: {
-            self.enterpriseHeader.heightConstraint?.constant += 118
-            self.enterpriseHeader.layoutIfNeeded()
-        }, completion: nil)
+        UIView.animate(withDuration: 1.0) {
+            self.frame.origin.y = 0
+            self.layoutIfNeeded()
+        }
+        UIView.animate(withDuration: 0.3) {
+            self.enterpriseHeader.alpha = 1
+        }
     }
 
     func reduceHeader() {
-        UIView.animate(withDuration: 1.0, delay: 0.0,options: [], animations: {
-            self.enterpriseHeader.heightConstraint?.constant -= 118
-            self.enterpriseHeader.layoutIfNeeded()
-        }, completion: nil)
+        UIView.animate(withDuration: 1.0){
+            self.frame.origin.y = -80
+            self.layoutIfNeeded()
+            
+        }
+        UIView.animate(withDuration: 0.0000001) {
+            self.enterpriseHeader.alpha = 0
+        }
      }
-    
     
 }

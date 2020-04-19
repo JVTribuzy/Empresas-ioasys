@@ -263,6 +263,9 @@ extension LoginView{
     }
     
     private func showActivityIndicatory() {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        
         self.subviews(loadingContainer)
         loadingContainer.left(0).top(0).right(0).bottom(0)
         loadingContainer.backgroundColor = UIColor().UIColorFromHex(rgbValue: 0x000000, alpha: 0.7)
