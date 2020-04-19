@@ -14,4 +14,5 @@ extension NSNotification.Name{
     public static let ioasysPresenEnterpriseDetailViewController = NSNotification.Name("com.tribuzy.empresas-ioasys.ioasysPresenEnterpriseDetailViewController")
     public static let ioasysDismissEnterpriseDetailViewController = NSNotification.Name("com.tribuzy.empresas-ioasys.ioasysDismissEnterpriseDetailViewController")
     public static let ioasysReloadEnterpriseQuantity = NSNotification.Name("com.tribuzy.empresas-ioasys.ioasysReloadEnterpriseQuantity")
+    public static let ioasysHideFullScreenActivityIndicator = NSNotification.Name("com.tribuzy.empresas-ioasys.ioasysHideFullScreenActivityIndicator")
 }
