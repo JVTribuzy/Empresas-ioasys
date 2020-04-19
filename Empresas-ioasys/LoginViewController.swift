@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    var model: UserModelController = {
+        return UserModelController.shared
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()

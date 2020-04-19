@@ -33,6 +33,8 @@
 		387EE9B0244A509B004F0883 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 387EE9A6244A509B004F0883 /* Rubik-MediumItalic.ttf */; };
 		3885A7EB244A03660072B65D /* EnterpriseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885A7EA244A03660072B65D /* EnterpriseTableViewController.swift */; };
 		3885A7ED244A04880072B65D /* EnterpriseContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885A7EC244A04880072B65D /* EnterpriseContentView.swift */; };
+		388F41C7244BE8CF00FFB0CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F41C6244BE8CF00FFB0CD /* User.swift */; };
+		388F41C9244BF09F00FFB0CD /* UserModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F41C8244BF09F00FFB0CD /* UserModelController.swift */; };
 		38A273F92449087D00A79613 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 38A273F82449087D00A79613 /* Stevia */; };
 		38B7904D244A7032001F7B56 /* EnterpriseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7904C244A7032001F7B56 /* EnterpriseDetailViewController.swift */; };
 		38B7904F244A7047001F7B56 /* EnterpriseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7904E244A7047001F7B56 /* EnterpriseDetailView.swift */; };
@@ -73,6 +75,8 @@
 		387EE9A6244A509B004F0883 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		3885A7EA244A03660072B65D /* EnterpriseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseTableViewController.swift; sourceTree = "<group>"; };
 		3885A7EC244A04880072B65D /* EnterpriseContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseContentView.swift; sourceTree = "<group>"; };
+		388F41C6244BE8CF00FFB0CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		388F41C8244BF09F00FFB0CD /* UserModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelController.swift; sourceTree = "<group>"; };
 		38B7904C244A7032001F7B56 /* EnterpriseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseDetailViewController.swift; sourceTree = "<group>"; };
 		38B7904E244A7047001F7B56 /* EnterpriseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseDetailView.swift; sourceTree = "<group>"; };
 		38B9490A244965C300127BB0 /* IoasysCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoasysCustomView.swift; sourceTree = "<group>"; };
@@ -150,6 +154,15 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		388F41C5244BE8BD00FFB0CD /* User */ = {
+			isa = PBXGroup;
+			children = (
+				388F41C6244BE8CF00FFB0CD /* User.swift */,
+				388F41C8244BF09F00FFB0CD /* UserModelController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		38A273F3244903F800A79613 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				383AB709244A165D00EDFC5F /* APIAcess.swift */,
+				388F41C5244BE8BD00FFB0CD /* User */,
 				383AB706244A110E00EDFC5F /* Enterprise */,
 			);
 			name = Model;
@@ -314,6 +328,7 @@
 				383AB705244A0C7C00EDFC5F /* Enterprise.swift in Sources */,
 				387EE999244A4CF7004F0883 /* EnterpriseTableViewCell.swift in Sources */,
 				386D0825244900BE00A465A8 /* AppDelegate.swift in Sources */,
+				388F41C7244BE8CF00FFB0CD /* User.swift in Sources */,
 				3885A7EB244A03660072B65D /* EnterpriseTableViewController.swift in Sources */,
 				38B949142449F31A00127BB0 /* EnterpriseView.swift in Sources */,
 				387A8A46244B7797001704D5 /* Extensio+UIWindow.swift in Sources */,
@@ -322,6 +337,7 @@
 				38B949122449F2E100127BB0 /* EnterpriseViewController.swift in Sources */,
 				387A8A42244B3FCC001704D5 /* EnterpriseSearchBar.swift in Sources */,
 				383AB708244A140000EDFC5F /* EnterpriseModelController.swift in Sources */,
+				388F41C9244BF09F00FFB0CD /* UserModelController.swift in Sources */,
 				38B9490D2449EE4A00127BB0 /* LoginView.swift in Sources */,
 				386D0827244900BE00A465A8 /* SceneDelegate.swift in Sources */,
 				38B949102449F04B00127BB0 /* Extension+UIColor.swift in Sources */,

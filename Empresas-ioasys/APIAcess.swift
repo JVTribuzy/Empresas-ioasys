@@ -11,7 +11,9 @@ public let apiVersion = "v1"
 public let enterpriseAPIModule = "enterprises"
 public let enterpriseEndpoint = "\(apiEndpoint)/\(apiVersion)/\(enterpriseAPIModule)"
 
+public let singinEndpoint = "\(apiEndpoint)/\(apiVersion)/users/auth/sign_in/"
+
 public let contentType = "application/json"
-public let accessToken = "V7nc14O6xMASCxZyweMsvQ"
-public let client = "tCiBMW9QAk15pKHuLbrFEQ"
-public let uid = "testeapple@ioasys.com.br"
+public var accessToken = "V7nc14O6xMASCxZyweMsvQ"
+public var client = "tCiBMW9QAk15pKHuLbrFEQ"
+public var uid = "testeapple@ioasys.com.br"
