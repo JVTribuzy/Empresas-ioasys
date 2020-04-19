@@ -32,9 +32,10 @@ extension EnterpriseTableViewController{
     func setupTableView(){
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.backgroundColor = .white
         tableView.register(EnterpriseTableViewCell.self, forCellReuseIdentifier: "enterpriseCell")
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
-        tableView.keyboardDismissMode = .none
+        tableView.keyboardDismissMode = .onDrag
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

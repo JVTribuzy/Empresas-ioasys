@@ -36,5 +36,5 @@ extension UIColor{
     static let ioasysSearchBarColor = UIColor.init(red: 245, green: 245, blue: 245)
     static let ioasysSearchTintColor = UIColor.init(red: 224, green: 30, blue: 105)
     static let ioasysSearchBarTextColor = UIColor.init(red: 102, green: 102, blue: 102)
-    static let ioasysUnknownResulTextColor = UIColor().UIColorFromHex(rgbValue: 666666, alpha: 0.7)
+    static let ioasysUnknownResulTextColor = UIColor.init(red: 102, green: 102, blue: 102)
 }

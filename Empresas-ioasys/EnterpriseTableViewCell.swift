@@ -38,6 +38,7 @@ extension EnterpriseTableViewCell{
     public func fill(_ enterprise: Enterprise){
         self.enterprise = enterprise
         
+        self.backgroundColor = .white
         enterpriseView.backgroundColor = enterprise.cellColor
         
         enterpriseName.text = enterprise.enterpriseName.uppercased()

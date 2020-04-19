@@ -52,6 +52,7 @@ extension EnterpriseContentView: IoasyCustomView{
         unknownResult.font = UIFont(name: "Rubik-Regular", size: 18)
         unknownResult.textColor = UIColor.ioasysUnknownResulTextColor
         unknownResult.text = NSLocalizedString("Nenhum resultado encontrado", comment: "")
+        unknownResult.alpha = 0.7
         
         enterpriseQuantity.numberOfLines = 1
         enterpriseQuantity.textAlignment = .left

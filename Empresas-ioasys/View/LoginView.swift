@@ -31,10 +31,16 @@ class LoginView: UIView{
     
     deinit {}
     
+    private let topImageView: UIImageView = UIImageView()
+    
+    public let emailLabel: UILabel = UILabel()
     public let emailTextField: UITextField = UITextField()
     public let emailView: UIView = UIView()
+    
+    private let passwordLabel: UILabel = UILabel()
     public let passwordTextField: UITextField = UITextField()
     public let passwordView: UIView = UIView()
+    
     public let buttonToEnterprise: UIButton = UIButton()
     
     let loadingContainer = UIView()
@@ -46,45 +52,68 @@ extension LoginView: IoasyCustomView{
     
     func autolayout() {
         
-        subviews(emailView.subviews(emailTextField),passwordView.subviews(passwordTextField),buttonToEnterprise)
+        subviews(topImageView, emailLabel, emailView.subviews(emailTextField), passwordLabel,passwordView.subviews(passwordTextField),buttonToEnterprise)
         
-        passwordView.right(16).left(16).height(40).centerVertically()
-    
-        emailView.right(16).left(16).height(40).top(200)
-        emailView.Bottom == passwordView.Top - 40
+        topImageView.right(0).left(0).top(0).height(240)
         
+        emailLabel.right(20).left(20).height(18)
+        emailLabel.Top == topImageView.Bottom + 28
+
+        emailView.right(16).left(16).height(40)
+        emailView.Top == emailLabel.Bottom + 4
         emailTextField.right(16).left(16).centerVertically()
-        passwordTextField.right(16).left(16).centerVertically()
         
-        // buttonToEnterprise
+        passwordLabel.Top == emailView.Bottom + 16
+        passwordLabel.right(20).left(20).height(18)
+        
+        passwordView.right(16).left(16).height(40)
+        passwordView.Top == passwordLabel.Bottom + 4
+        passwordTextField.right(16).left(16).centerVertically()
+
         buttonToEnterpriseTarget()
-        buttonToEnterprise.Top == passwordView.Bottom + 16
+        buttonToEnterprise.Top == passwordView.Bottom + 40
         buttonToEnterprise.height(50).right(30).left(30)
     }
     
     func style() {
         backgroundColor = .white
         
-        // buttonToEnterprise
-        buttonToEnterprise.text(("entra").uppercased())
-        buttonToEnterprise.backgroundColor = UIColor.ioasysLoginButtonColor
+        topImageView.image = UIImage(named: "loginTopImage")
+        
+        emailLabel.textAlignment = .left
+        emailLabel.font = UIFont(name: "Rubik-Regular", size: 14)
+        emailLabel.textColor = UIColor.ioasysSearchBarTextColor
+        emailLabel.tintColor = UIColor.ioasysSearchTintColor
+        emailLabel.text = NSLocalizedString("Email", comment: "")
         
         emailTextField.textAlignment = .left
         emailTextField.font = UIFont(name: "Rubik-Regular", size: 18)
         emailTextField.textColor = UIColor.ioasysSearchBarTextColor
         emailTextField.tintColor = UIColor.ioasysSearchTintColor
-        emailTextField.placeholder = NSLocalizedString("e-mail", comment: "")
+        emailTextField.placeholder = NSLocalizedString("", comment: "")
+        
+        passwordLabel.textAlignment = .left
+        passwordLabel.font = UIFont(name: "Rubik-Regular", size: 14)
+        passwordLabel.textColor = UIColor.ioasysSearchBarTextColor
+        passwordLabel.tintColor = UIColor.ioasysSearchTintColor
+        passwordLabel.text = NSLocalizedString("Senha", comment: "")
         
         passwordTextField.textAlignment = .left
         passwordTextField.font = UIFont(name: "Rubik-Regular", size: 18)
         passwordTextField.textColor = UIColor.ioasysSearchBarTextColor
         passwordTextField.tintColor = UIColor.ioasysSearchTintColor
-        passwordTextField.placeholder = NSLocalizedString("password", comment: "")
+        passwordTextField.placeholder = NSLocalizedString("", comment: "")
         
         emailView.backgroundColor = UIColor.ioasysSearchBarColor
+        emailView.layer.cornerRadius = 4
         
         passwordView.backgroundColor = UIColor.ioasysSearchBarColor
+        passwordView.layer.cornerRadius = 4
         
+        buttonToEnterprise.text((NSLocalizedString("entrar", comment: "")).uppercased())
+        buttonToEnterprise.backgroundColor = UIColor.ioasysLoginButtonColor
+        buttonToEnterprise.titleLabel?.font = UIFont(name: "Rubik-Medium", size: 16)
+        buttonToEnterprise.layer.cornerRadius = 8
     }
 }
 

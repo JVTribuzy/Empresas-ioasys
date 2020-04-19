@@ -21,6 +21,7 @@ class EnterpriseDetailViewController: UIViewController{
         fill()
         
         backTarget()
+        
     }
     
     required init?(coder: NSCoder) {
