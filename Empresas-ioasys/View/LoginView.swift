@@ -32,6 +32,8 @@ class LoginView: UIView{
     deinit {}
     
     private let topImageView: UIImageView = UIImageView()
+    private let logoLogin: UIImageView = UIImageView()
+    private let welcomeMessage: UILabel = UILabel()
     
     public let emailLabel: UILabel = UILabel()
     public let emailTextField: UITextField = UITextField()
@@ -57,9 +59,13 @@ extension LoginView: IoasyCustomView{
     
     func autolayout() {
         
-        subviews(topImageView, emailLabel, emailView.subviews(emailTextField, emailWrong), passwordLabel,passwordView.subviews(passwordTextField, visibilityButton, passwordWrong), wrongInput, buttonToEnterprise)
+        subviews(topImageView.subviews(logoLogin, welcomeMessage), emailLabel, emailView.subviews(emailTextField, emailWrong), passwordLabel,passwordView.subviews(passwordTextField, visibilityButton, passwordWrong), wrongInput, buttonToEnterprise)
         
         topImageView.right(0).left(0).top(0).height(240)
+        logoLogin.width(40).height(31.58).top(84).centerHorizontally()
+        
+        welcomeMessage.Top == logoLogin.Bottom + 16.42
+        welcomeMessage.right(16).left(16).height(24)
         
         emailLabel.right(20).left(20).height(18)
         emailLabel.Top == topImageView.Bottom + 28
@@ -92,6 +98,13 @@ extension LoginView: IoasyCustomView{
         backgroundColor = .white
         
         topImageView.image = UIImage(named: "loginTopImage")
+        
+        logoLogin.image = UIImage(named: "logo_login")
+        
+        welcomeMessage.textAlignment = .center
+        welcomeMessage.font = UIFont(name: "Rubik-Regular", size: 20)
+        welcomeMessage.textColor = .white
+        welcomeMessage.text = NSLocalizedString("Seja bem vindo ao empresas!", comment: "")
         
         emailLabel.textAlignment = .left
         emailLabel.font = UIFont(name: "Rubik-Regular", size: 14)
