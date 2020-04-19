@@ -11,17 +11,17 @@ import UIKit
 import Stevia
 
 class EnterpriseView: UIView{
-    
+  
     var model: EnterpriseModelController = {
         return EnterpriseModelController.shared
     }()
-    
+  
     private override init(frame: CGRect) {
         super.init(frame: .zero)
         
         autolayout()
         style()
-        
+      
         addNotification()
     }
     
@@ -70,12 +70,11 @@ extension EnterpriseView: IoasyCustomView{
         
         enterpriseSearch.right(16).left(16).height(48)
         enterpriseSearch.Top == enterpriseHeader.Bottom - 24
-        
     }
     
     func style() {
         backgroundColor = UIColor.ioasysEnterpriseScreenBackgroundColor
-        
+
         enterpriseContentView.backgroundColor = .white
         
         logo1.image = UIImage(named: "logo_login")
@@ -124,5 +123,4 @@ extension EnterpriseView: IoasyCustomView{
             self.enterpriseHeader.alpha = 0
         }
      }
-    
 }

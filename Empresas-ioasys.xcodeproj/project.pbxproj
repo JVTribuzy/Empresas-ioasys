@@ -171,6 +171,7 @@
 				386D0828244900BE00A465A8 /* LoginViewController.swift */,
 				38B949112449F2E100127BB0 /* EnterpriseViewController.swift */,
 				3885A7EA244A03660072B65D /* EnterpriseTableViewController.swift */,
+
 				387EE998244A4CF7004F0883 /* EnterpriseTableViewCell.swift */,
 				38B7904C244A7032001F7B56 /* EnterpriseDetailViewController.swift */,
 				387A8A43244B5273001704D5 /* EnterpriseSearchBarController.swift */,
@@ -200,7 +201,9 @@
 			isa = PBXGroup;
 			children = (
 				383AB709244A165D00EDFC5F /* APIAcess.swift */,
+
 				388F41C5244BE8BD00FFB0CD /* User */,
+
 				383AB706244A110E00EDFC5F /* Enterprise */,
 			);
 			name = Model;
@@ -230,6 +233,7 @@
 				38B949152449F47D00127BB0 /* Extension+NSNotification.swift */,
 				387A8A45244B7797001704D5 /* Extensio+UIWindow.swift */,
 				388F41CA244CC8EE00FFB0CD /* Extension+UIView.swift */,
+
 			);
 			path = Extensions;
 			sourceTree = "<group>";

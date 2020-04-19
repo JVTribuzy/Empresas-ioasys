@@ -19,7 +19,6 @@ class EnterpriseContentView: UIView{
         super.init(frame: .zero)
         autolayout()
         style()
-        
         addNotification()
     }
     
@@ -45,7 +44,6 @@ extension EnterpriseContentView: IoasyCustomView{
     }
     
     func style() {
-        
         unknownResult.isHidden = true
         unknownResult.numberOfLines = 1
         unknownResult.textAlignment = .center

@@ -25,7 +25,6 @@ class LoginView: UIView, UITextFieldDelegate{
         addNotification()
         
         textFieldSettings()
-    
     }
     
     required init?(coder: NSCoder) {
@@ -33,7 +32,7 @@ class LoginView: UIView, UITextFieldDelegate{
     }
     
     deinit {}
-    
+   
     private let topImageView: UIImageView = UIImageView()
     private let logoLogin: UIImageView = UIImageView()
     private let welcomeMessage: UILabel = UILabel()
@@ -61,7 +60,6 @@ class LoginView: UIView, UITextFieldDelegate{
 extension LoginView: IoasyCustomView{
     
     func autolayout() {
-        
         subviews(topImageView.subviews(logoLogin, welcomeMessage), emailLabel, emailView.subviews(emailTextField, emailWrong), passwordLabel,passwordView.subviews(passwordTextField, visibilityButton, passwordWrong), wrongInput, buttonToEnterprise)
         
         topImageView.right(0).left(0).top(0).height(240)
@@ -94,6 +92,7 @@ extension LoginView: IoasyCustomView{
 
         buttonToEnterpriseTarget()
         buttonToEnterprise.Top == passwordView.Bottom + 40
+
         buttonToEnterprise.height(50).right(30).left(30)
     }
     
@@ -172,6 +171,7 @@ extension LoginView{
     @objc private func changePasswordVisibility(){
         passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
     }
+
     private func buttonToEnterpriseTarget(){
         buttonToEnterprise.addTarget(self, action: #selector(goToEnterpriseViewController), for: .touchUpInside)
     }

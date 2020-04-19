@@ -26,6 +26,7 @@ class EnterpriseTableViewController: UITableViewController {
     }
     
     deinit { NotificationCenter.default.removeObserver(self) }
+
 }
 
 extension EnterpriseTableViewController{
@@ -57,7 +58,7 @@ extension EnterpriseTableViewController{
         
         return cell
     }
-    
+   
 }
 
 extension EnterpriseTableViewController{

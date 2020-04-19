@@ -17,3 +17,4 @@ public let contentType = "application/json"
 public var accessToken = "V7nc14O6xMASCxZyweMsvQ"
 public var client = "tCiBMW9QAk15pKHuLbrFEQ"
 public var uid = "testeapple@ioasys.com.br"
+

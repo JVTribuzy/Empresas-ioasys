@@ -36,7 +36,7 @@ class EnterpriseModelController {
                 print(String(describing: error))
                 return
             }
-            
+
             do{
                 let content = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String : Any]
                 let enterprise: Array<[String : Any]> = content["enterprises"] as! Array<[String : Any]>
@@ -78,6 +78,7 @@ class EnterpriseModelController {
                                                                     )
                     self.enterprises.append(contentEnterprise)
                     self.enterpriseTotal = self.enterprises.count
+
                     NotificationCenter.default.post(name: .ioasysReloadEnterpriseTableView, object: nil)
                 }
             } catch {}
