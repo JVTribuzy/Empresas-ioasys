@@ -40,6 +40,7 @@ class LoginView: UIView{
     private let passwordLabel: UILabel = UILabel()
     public let passwordTextField: UITextField = UITextField()
     public let passwordView: UIView = UIView()
+    private let visibilityButton: UIButton = UIButton()
     
     public let buttonToEnterprise: UIButton = UIButton()
     
@@ -52,7 +53,7 @@ extension LoginView: IoasyCustomView{
     
     func autolayout() {
         
-        subviews(topImageView, emailLabel, emailView.subviews(emailTextField), passwordLabel,passwordView.subviews(passwordTextField),buttonToEnterprise)
+        subviews(topImageView, emailLabel, emailView.subviews(emailTextField), passwordLabel,passwordView.subviews(passwordTextField, visibilityButton),buttonToEnterprise)
         
         topImageView.right(0).left(0).top(0).height(240)
         
@@ -68,7 +69,10 @@ extension LoginView: IoasyCustomView{
         
         passwordView.right(16).left(16).height(40)
         passwordView.Top == passwordLabel.Bottom + 4
-        passwordTextField.right(16).left(16).centerVertically()
+        visibilityButton.width(22).height(15).right(13).centerVertically()
+        visibilityButtonTarget()
+        passwordTextField.left(16).centerVertically()
+        passwordTextField.Right == visibilityButton.Left + 13
 
         buttonToEnterpriseTarget()
         buttonToEnterprise.Top == passwordView.Bottom + 40
@@ -103,6 +107,9 @@ extension LoginView: IoasyCustomView{
         passwordTextField.textColor = UIColor.ioasysSearchBarTextColor
         passwordTextField.tintColor = UIColor.ioasysSearchTintColor
         passwordTextField.placeholder = NSLocalizedString("", comment: "")
+        passwordTextField.isSecureTextEntry = true
+        
+        visibilityButton.setBackgroundImage(UIImage(named: "eye"), for: .normal)
         
         emailView.backgroundColor = UIColor.ioasysSearchBarColor
         emailView.layer.cornerRadius = 4
@@ -118,6 +125,13 @@ extension LoginView: IoasyCustomView{
 }
 
 extension LoginView{
+    private func visibilityButtonTarget(){
+        visibilityButton.addTarget(self, action: #selector(changePasswordVisibility), for: .touchUpInside)
+    }
+    
+    @objc private func changePasswordVisibility(){
+        passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+    }
     private func buttonToEnterpriseTarget(){
         buttonToEnterprise.addTarget(self, action: #selector(goToEnterpriseViewController), for: .touchUpInside)
     }
