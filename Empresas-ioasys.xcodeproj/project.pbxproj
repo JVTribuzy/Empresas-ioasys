@@ -35,6 +35,7 @@
 		3885A7ED244A04880072B65D /* EnterpriseContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885A7EC244A04880072B65D /* EnterpriseContentView.swift */; };
 		388F41C7244BE8CF00FFB0CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F41C6244BE8CF00FFB0CD /* User.swift */; };
 		388F41C9244BF09F00FFB0CD /* UserModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F41C8244BF09F00FFB0CD /* UserModelController.swift */; };
+		388F41CB244CC8EE00FFB0CD /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F41CA244CC8EE00FFB0CD /* Extension+UIView.swift */; };
 		38A273F92449087D00A79613 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 38A273F82449087D00A79613 /* Stevia */; };
 		38B7904D244A7032001F7B56 /* EnterpriseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7904C244A7032001F7B56 /* EnterpriseDetailViewController.swift */; };
 		38B7904F244A7047001F7B56 /* EnterpriseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7904E244A7047001F7B56 /* EnterpriseDetailView.swift */; };
@@ -77,6 +78,7 @@
 		3885A7EC244A04880072B65D /* EnterpriseContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseContentView.swift; sourceTree = "<group>"; };
 		388F41C6244BE8CF00FFB0CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		388F41C8244BF09F00FFB0CD /* UserModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelController.swift; sourceTree = "<group>"; };
+		388F41CA244CC8EE00FFB0CD /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		38B7904C244A7032001F7B56 /* EnterpriseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseDetailViewController.swift; sourceTree = "<group>"; };
 		38B7904E244A7047001F7B56 /* EnterpriseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseDetailView.swift; sourceTree = "<group>"; };
 		38B9490A244965C300127BB0 /* IoasysCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoasysCustomView.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				38B9490F2449F04B00127BB0 /* Extension+UIColor.swift */,
 				38B949152449F47D00127BB0 /* Extension+NSNotification.swift */,
 				387A8A45244B7797001704D5 /* Extensio+UIWindow.swift */,
+				388F41CA244CC8EE00FFB0CD /* Extension+UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			files = (
 				38B949162449F47D00127BB0 /* Extension+NSNotification.swift in Sources */,
 				38B9490B244965C300127BB0 /* IoasysCustomView.swift in Sources */,
+				388F41CB244CC8EE00FFB0CD /* Extension+UIView.swift in Sources */,
 				386D0829244900BE00A465A8 /* LoginViewController.swift in Sources */,
 				38B7904D244A7032001F7B56 /* EnterpriseDetailViewController.swift in Sources */,
 				38B7904F244A7047001F7B56 /* EnterpriseDetailView.swift in Sources */,

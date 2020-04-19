@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Stevia
 
-class LoginView: UIView{
+class LoginView: UIView, UITextFieldDelegate{
     
     var model: UserModelController = {
         return UserModelController.shared
@@ -23,6 +23,9 @@ class LoginView: UIView{
         self.style()
         
         addNotification()
+        
+        textFieldSettings()
+    
     }
     
     required init?(coder: NSCoder) {
@@ -68,7 +71,7 @@ extension LoginView: IoasyCustomView{
         welcomeMessage.right(16).left(16).height(24)
         
         emailLabel.right(20).left(20).height(18)
-        emailLabel.Top == topImageView.Bottom + 28
+        emailLabel.Top == topImageView.Bottom + 24
 
         emailView.right(16).left(16).height(48)
         emailView.Top == emailLabel.Bottom + 4
@@ -176,13 +179,68 @@ extension LoginView{
         showActivityIndicatory()
         model.getAuthentication(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
     }
+    
+    func textFieldSettings(){
+        emailTextField.returnKeyType = .next
+        emailTextField.keyboardType = .emailAddress
+        emailTextField.tag = 0
+        emailTextField.delegate = self
+        emailTextField.inputAccessoryView = nil
+        
+        passwordTextField.tag = 1
+        passwordTextField.delegate = self
+        passwordTextField.inputAccessoryView = nil
+    
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.endEditing(true)
+        return false
+    }
 }
 
 extension LoginView{
     func addNotification(){
         NotificationCenter.default.addObserver(self, selector: #selector(hideActivityIndicator), name: .ioasysHideFullScreenActivityIndicator, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(wrongPassword), name: .ioasysWrongPassword, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+        
+    @objc func keyboardWillShow(_ notification: Notification) {
+        print("\n apareceu")
+        reduceHeader()
+        
+    }
+
+    @objc func keyboardWillHide(_ notification: Notification) {
+        print("\n escondeu")
+        resetHeader()
+    }
+    
+    func resetHeader() {
+        UIView.animate(withDuration: 1.0) {
+            self.frame.origin.y = 0
+            self.layoutIfNeeded()
+            self.logoLogin.frame.origin.y = 84
+            self.logoLogin.layoutIfNeeded()
+        }
+        UIView.animate(withDuration: 0.3) {
+            self.welcomeMessage.alpha = 1
+        }
+    }
+
+    func reduceHeader() {
+        UIView.animate(withDuration: 1.0){
+            self.frame.origin.y = -122
+            self.layoutIfNeeded()
+            self.logoLogin.frame.origin.y = 170
+            self.logoLogin.layoutIfNeeded()
+        }
+        UIView.animate(withDuration: 0.0000001) {
+            self.welcomeMessage.alpha = 0
+        }
+     }
     
     @objc private func wrongPassword(){
         emailView.layer.borderColor = UIColor.red.cgColor

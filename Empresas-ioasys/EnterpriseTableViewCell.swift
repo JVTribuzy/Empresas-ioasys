@@ -53,6 +53,7 @@ extension EnterpriseTableViewCell{
     
     @objc private func presentEnterpriseDetailViewControllerNotificationReceived(){
         model.enterpriseToDetail = self.enterprise
+        
         DispatchQueue.main.async{
 //            NotificationCenter.default.post(name: UIResponder.keyboardDidHideNotification, object: nil)
             NotificationCenter.default.post(name: .ioasysPresenEnterpriseDetailViewController, object: nil)
