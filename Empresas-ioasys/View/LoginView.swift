@@ -100,7 +100,7 @@ extension LoginView{
 
 extension LoginView{
     func addNotification(){
-        NotificationCenter.default.addObserver(self, selector: #selector(hideActivityIndicator), name: .ioasysShowFullScreenActivityIndicator, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(hideActivityIndicator), name: .ioasysHideFullScreenActivityIndicator, object: nil)
     }
     
     private func showActivityIndicatory() {

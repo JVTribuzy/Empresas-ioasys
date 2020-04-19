@@ -41,6 +41,9 @@ class UserModelController {
                 self.successAuth = json["success"] as! Bool
                 
                 guard self.successAuth == true else{
+                    DispatchQueue.main.async {
+                        NotificationCenter.default.post(name: .ioasysHideFullScreenActivityIndicator, object: nil)
+                    }
                     return
                 }
                 
@@ -67,6 +70,7 @@ class UserModelController {
                                          firstAccess: jsonInvestor["first_access"] as? Bool,
                                          superAngel: jsonInvestor["super_angel"] as? Bool)
                 DispatchQueue.main.async {
+                    NotificationCenter.default.post(name: .ioasysHideFullScreenActivityIndicator, object: nil)
                     NotificationCenter.default.post(name: .ioasysGoToEnterpriseViewController, object: nil)
                 }
             } catch {}
