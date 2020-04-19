@@ -9,7 +9,11 @@
 import Foundation
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
+    
+    var model: UserModelController = {
+        return UserModelController.shared
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +23,12 @@ class LoginViewController: UIViewController {
     
     deinit { NotificationCenter.default.removeObserver(self) }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-          return .lightContent
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 extension LoginViewController{

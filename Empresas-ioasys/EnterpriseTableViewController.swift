@@ -25,25 +25,40 @@ class EnterpriseTableViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    deinit {}
+    deinit { NotificationCenter.default.removeObserver(self) }
+
 }
 
 extension EnterpriseTableViewController{
     func setupTableView(){
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "enterpriseCell")
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.backgroundColor = .white
+        tableView.register(EnterpriseTableViewCell.self, forCellReuseIdentifier: "enterpriseCell")
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableView.keyboardDismissMode = .onDrag
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.enterprises.count
+        if model.shouldShowSearchResults{
+            return model.filteredEnterprises.count
+        } else{
+            return model.enterprises.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "enterpriseCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "enterpriseCell", for: indexPath) as! EnterpriseTableViewCell
         
-        cell.textLabel?.text = model.enterprises[indexPath.row].enterpriseName
+        if model.shouldShowSearchResults && model.enterpriseTotal != 0{
+            cell.fill(model.filteredEnterprises[indexPath.row])
+        } else{
+            cell.fill(model.enterprises[indexPath.row])
+        }
         
         return cell
     }
+   
 }
 
 extension EnterpriseTableViewController{
