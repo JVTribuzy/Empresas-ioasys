@@ -7,84 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		383AB705244A0C7C00EDFC5F /* Enterprise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383AB704244A0C7C00EDFC5F /* Enterprise.swift */; };
-		383AB708244A140000EDFC5F /* EnterpriseModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383AB707244A140000EDFC5F /* EnterpriseModelController.swift */; };
-		383AB70A244A165D00EDFC5F /* APIAcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383AB709244A165D00EDFC5F /* APIAcess.swift */; };
+		3855BDE92455EDD5007B123C /* APIAcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855BDDC2455EDD5007B123C /* APIAcess.swift */; };
+		3855BDEA2455EDD5007B123C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855BDDE2455EDD5007B123C /* User.swift */; };
+		3855BDEB2455EDD5007B123C /* UserModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855BDDF2455EDD5007B123C /* UserModelController.swift */; };
+		3855BDEE2455EDD5007B123C /* EnterpriseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855BDE32455EDD5007B123C /* EnterpriseTableViewCell.swift */; };
+		3855BDEF2455EDD5007B123C /* EnterpriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855BDE42455EDD5007B123C /* EnterpriseViewController.swift */; };
+		3855BDF02455EDD5007B123C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855BDE52455EDD5007B123C /* LoginViewController.swift */; };
+		3855BDF12455EDD5007B123C /* EnterpriseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855BDE62455EDD5007B123C /* EnterpriseDetailViewController.swift */; };
+		3855BDF22455EDD5007B123C /* EnterpriseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855BDE72455EDD5007B123C /* EnterpriseTableViewController.swift */; };
+		3855BDF32455EDD5007B123C /* EnterpriseSearchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855BDE82455EDD5007B123C /* EnterpriseSearchBarController.swift */; };
+		3855BDFB2455EEEF007B123C /* EnterpriseModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855BDF92455EEEF007B123C /* EnterpriseModelController.swift */; };
+		3855BDFC2455EEEF007B123C /* Enterprise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855BDFA2455EEEF007B123C /* Enterprise.swift */; };
+		3855BE0A2455EF67007B123C /* EnterpriseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855BDFE2455EF67007B123C /* EnterpriseDetailView.swift */; };
+		3855BE0B2455EF67007B123C /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3855BE002455EF67007B123C /* Rubik-MediumItalic.ttf */; };
+		3855BE0C2455EF67007B123C /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3855BE012455EF67007B123C /* Rubik-Bold.ttf */; };
+		3855BE0D2455EF67007B123C /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3855BE022455EF67007B123C /* Rubik-Light.ttf */; };
+		3855BE0E2455EF67007B123C /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3855BE032455EF67007B123C /* Rubik-Medium.ttf */; };
+		3855BE0F2455EF67007B123C /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3855BE042455EF67007B123C /* Rubik-Black.ttf */; };
+		3855BE102455EF67007B123C /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3855BE052455EF67007B123C /* Rubik-Italic.ttf */; };
+		3855BE112455EF67007B123C /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3855BE062455EF67007B123C /* Rubik-LightItalic.ttf */; };
+		3855BE122455EF67007B123C /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3855BE072455EF67007B123C /* Rubik-BlackItalic.ttf */; };
+		3855BE132455EF67007B123C /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3855BE082455EF67007B123C /* Rubik-Regular.ttf */; };
+		3855BE142455EF67007B123C /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3855BE092455EF67007B123C /* Rubik-BoldItalic.ttf */; };
+		3855BE172455EF8D007B123C /* IoasysCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3855BE162455EF8D007B123C /* IoasysCustomView.swift */; };
 		386D0825244900BE00A465A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D0824244900BE00A465A8 /* AppDelegate.swift */; };
 		386D0827244900BE00A465A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D0826244900BE00A465A8 /* SceneDelegate.swift */; };
-		386D0829244900BE00A465A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D0828244900BE00A465A8 /* LoginViewController.swift */; };
-		386D082C244900BE00A465A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386D082A244900BE00A465A8 /* Main.storyboard */; };
 		386D082E244900C100A465A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 386D082D244900C100A465A8 /* Assets.xcassets */; };
 		386D0831244900C100A465A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386D082F244900C100A465A8 /* LaunchScreen.storyboard */; };
 		387A8A42244B3FCC001704D5 /* EnterpriseSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A8A41244B3FCC001704D5 /* EnterpriseSearchBar.swift */; };
-		387A8A44244B5273001704D5 /* EnterpriseSearchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A8A43244B5273001704D5 /* EnterpriseSearchBarController.swift */; };
 		387A8A46244B7797001704D5 /* Extensio+UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387A8A45244B7797001704D5 /* Extensio+UIWindow.swift */; };
-		387EE999244A4CF7004F0883 /* EnterpriseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EE998244A4CF7004F0883 /* EnterpriseTableViewCell.swift */; };
 		387EE99B244A4DA8004F0883 /* EnterpriseTableViewCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387EE99A244A4DA8004F0883 /* EnterpriseTableViewCellStyle.swift */; };
-		387EE9A7244A509B004F0883 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 387EE99D244A509B004F0883 /* Rubik-Italic.ttf */; };
-		387EE9A8244A509B004F0883 /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 387EE99E244A509B004F0883 /* Rubik-BoldItalic.ttf */; };
-		387EE9A9244A509B004F0883 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 387EE99F244A509B004F0883 /* Rubik-Medium.ttf */; };
-		387EE9AA244A509B004F0883 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 387EE9A0244A509B004F0883 /* Rubik-BlackItalic.ttf */; };
-		387EE9AB244A509B004F0883 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 387EE9A1244A509B004F0883 /* Rubik-Bold.ttf */; };
-		387EE9AC244A509B004F0883 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 387EE9A2244A509B004F0883 /* Rubik-Light.ttf */; };
-		387EE9AD244A509B004F0883 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 387EE9A3244A509B004F0883 /* Rubik-Black.ttf */; };
-		387EE9AE244A509B004F0883 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 387EE9A4244A509B004F0883 /* Rubik-Regular.ttf */; };
-		387EE9AF244A509B004F0883 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 387EE9A5244A509B004F0883 /* Rubik-LightItalic.ttf */; };
-		387EE9B0244A509B004F0883 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 387EE9A6244A509B004F0883 /* Rubik-MediumItalic.ttf */; };
-		3885A7EB244A03660072B65D /* EnterpriseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885A7EA244A03660072B65D /* EnterpriseTableViewController.swift */; };
 		3885A7ED244A04880072B65D /* EnterpriseContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885A7EC244A04880072B65D /* EnterpriseContentView.swift */; };
-		388F41C7244BE8CF00FFB0CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F41C6244BE8CF00FFB0CD /* User.swift */; };
-		388F41C9244BF09F00FFB0CD /* UserModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F41C8244BF09F00FFB0CD /* UserModelController.swift */; };
 		388F41CB244CC8EE00FFB0CD /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F41CA244CC8EE00FFB0CD /* Extension+UIView.swift */; };
 		38A273F92449087D00A79613 /* Stevia in Frameworks */ = {isa = PBXBuildFile; productRef = 38A273F82449087D00A79613 /* Stevia */; };
-		38B7904D244A7032001F7B56 /* EnterpriseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7904C244A7032001F7B56 /* EnterpriseDetailViewController.swift */; };
-		38B7904F244A7047001F7B56 /* EnterpriseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B7904E244A7047001F7B56 /* EnterpriseDetailView.swift */; };
-		38B9490B244965C300127BB0 /* IoasysCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B9490A244965C300127BB0 /* IoasysCustomView.swift */; };
 		38B9490D2449EE4A00127BB0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B9490C2449EE4A00127BB0 /* LoginView.swift */; };
 		38B949102449F04B00127BB0 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B9490F2449F04B00127BB0 /* Extension+UIColor.swift */; };
-		38B949122449F2E100127BB0 /* EnterpriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B949112449F2E100127BB0 /* EnterpriseViewController.swift */; };
 		38B949142449F31A00127BB0 /* EnterpriseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B949132449F31A00127BB0 /* EnterpriseView.swift */; };
 		38B949162449F47D00127BB0 /* Extension+NSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B949152449F47D00127BB0 /* Extension+NSNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		383AB704244A0C7C00EDFC5F /* Enterprise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enterprise.swift; sourceTree = "<group>"; };
-		383AB707244A140000EDFC5F /* EnterpriseModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseModelController.swift; sourceTree = "<group>"; };
-		383AB709244A165D00EDFC5F /* APIAcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAcess.swift; sourceTree = "<group>"; };
+		3855BDDC2455EDD5007B123C /* APIAcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIAcess.swift; sourceTree = "<group>"; };
+		3855BDDE2455EDD5007B123C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3855BDDF2455EDD5007B123C /* UserModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModelController.swift; sourceTree = "<group>"; };
+		3855BDE32455EDD5007B123C /* EnterpriseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterpriseTableViewCell.swift; sourceTree = "<group>"; };
+		3855BDE42455EDD5007B123C /* EnterpriseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterpriseViewController.swift; sourceTree = "<group>"; };
+		3855BDE52455EDD5007B123C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3855BDE62455EDD5007B123C /* EnterpriseDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterpriseDetailViewController.swift; sourceTree = "<group>"; };
+		3855BDE72455EDD5007B123C /* EnterpriseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterpriseTableViewController.swift; sourceTree = "<group>"; };
+		3855BDE82455EDD5007B123C /* EnterpriseSearchBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterpriseSearchBarController.swift; sourceTree = "<group>"; };
+		3855BDF92455EEEF007B123C /* EnterpriseModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterpriseModelController.swift; sourceTree = "<group>"; };
+		3855BDFA2455EEEF007B123C /* Enterprise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enterprise.swift; sourceTree = "<group>"; };
+		3855BDFE2455EF67007B123C /* EnterpriseDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterpriseDetailView.swift; sourceTree = "<group>"; };
+		3855BE002455EF67007B123C /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		3855BE012455EF67007B123C /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		3855BE022455EF67007B123C /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
+		3855BE032455EF67007B123C /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		3855BE042455EF67007B123C /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
+		3855BE052455EF67007B123C /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		3855BE062455EF67007B123C /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		3855BE072455EF67007B123C /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		3855BE082455EF67007B123C /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		3855BE092455EF67007B123C /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
+		3855BE162455EF8D007B123C /* IoasysCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IoasysCustomView.swift; sourceTree = "<group>"; };
 		386D0821244900BE00A465A8 /* Empresas-ioasys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Empresas-ioasys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		386D0824244900BE00A465A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		386D0826244900BE00A465A8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		386D0828244900BE00A465A8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		386D082B244900BE00A465A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		386D082D244900C100A465A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		386D0830244900C100A465A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		386D0832244900C100A465A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		387A8A41244B3FCC001704D5 /* EnterpriseSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseSearchBar.swift; sourceTree = "<group>"; };
-		387A8A43244B5273001704D5 /* EnterpriseSearchBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseSearchBarController.swift; sourceTree = "<group>"; };
 		387A8A45244B7797001704D5 /* Extensio+UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensio+UIWindow.swift"; sourceTree = "<group>"; };
-		387EE998244A4CF7004F0883 /* EnterpriseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseTableViewCell.swift; sourceTree = "<group>"; };
 		387EE99A244A4DA8004F0883 /* EnterpriseTableViewCellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseTableViewCellStyle.swift; sourceTree = "<group>"; };
-		387EE99D244A509B004F0883 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
-		387EE99E244A509B004F0883 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
-		387EE99F244A509B004F0883 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
-		387EE9A0244A509B004F0883 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
-		387EE9A1244A509B004F0883 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
-		387EE9A2244A509B004F0883 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
-		387EE9A3244A509B004F0883 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
-		387EE9A4244A509B004F0883 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
-		387EE9A5244A509B004F0883 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
-		387EE9A6244A509B004F0883 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
-		3885A7EA244A03660072B65D /* EnterpriseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseTableViewController.swift; sourceTree = "<group>"; };
 		3885A7EC244A04880072B65D /* EnterpriseContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseContentView.swift; sourceTree = "<group>"; };
-		388F41C6244BE8CF00FFB0CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		388F41C8244BF09F00FFB0CD /* UserModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModelController.swift; sourceTree = "<group>"; };
 		388F41CA244CC8EE00FFB0CD /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
-		38B7904C244A7032001F7B56 /* EnterpriseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseDetailViewController.swift; sourceTree = "<group>"; };
-		38B7904E244A7047001F7B56 /* EnterpriseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseDetailView.swift; sourceTree = "<group>"; };
-		38B9490A244965C300127BB0 /* IoasysCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IoasysCustomView.swift; sourceTree = "<group>"; };
 		38B9490C2449EE4A00127BB0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		38B9490F2449F04B00127BB0 /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
-		38B949112449F2E100127BB0 /* EnterpriseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseViewController.swift; sourceTree = "<group>"; };
 		38B949132449F31A00127BB0 /* EnterpriseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterpriseView.swift; sourceTree = "<group>"; };
 		38B949152449F47D00127BB0 /* Extension+NSNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NSNotification.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,13 +99,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		383AB706244A110E00EDFC5F /* Enterprise */ = {
+		3855BDDB2455EDD5007B123C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				383AB704244A0C7C00EDFC5F /* Enterprise.swift */,
-				383AB707244A140000EDFC5F /* EnterpriseModelController.swift */,
+				3855BDDC2455EDD5007B123C /* APIAcess.swift */,
+				3855BDDD2455EDD5007B123C /* User */,
+				3855BDF82455EEEF007B123C /* Enterprise */,
 			);
-			name = Enterprise;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3855BDDD2455EDD5007B123C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				3855BDDE2455EDD5007B123C /* User.swift */,
+				3855BDDF2455EDD5007B123C /* UserModelController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		3855BDE22455EDD5007B123C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3855BDE32455EDD5007B123C /* EnterpriseTableViewCell.swift */,
+				3855BDE42455EDD5007B123C /* EnterpriseViewController.swift */,
+				3855BDE52455EDD5007B123C /* LoginViewController.swift */,
+				3855BDE62455EDD5007B123C /* EnterpriseDetailViewController.swift */,
+				3855BDE72455EDD5007B123C /* EnterpriseTableViewController.swift */,
+				3855BDE82455EDD5007B123C /* EnterpriseSearchBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3855BDF42455EDFA007B123C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				38B9490C2449EE4A00127BB0 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3855BDF52455EE04007B123C /* Enterprises */ = {
+			isa = PBXGroup;
+			children = (
+				38B949132449F31A00127BB0 /* EnterpriseView.swift */,
+				3885A7EC244A04880072B65D /* EnterpriseContentView.swift */,
+				387EE99A244A4DA8004F0883 /* EnterpriseTableViewCellStyle.swift */,
+				387A8A41244B3FCC001704D5 /* EnterpriseSearchBar.swift */,
+			);
+			path = Enterprises;
+			sourceTree = "<group>";
+		};
+		3855BDF82455EEEF007B123C /* Enterprise */ = {
+			isa = PBXGroup;
+			children = (
+				3855BDF92455EEEF007B123C /* EnterpriseModelController.swift */,
+				3855BDFA2455EEEF007B123C /* Enterprise.swift */,
+			);
+			path = Enterprise;
+			sourceTree = "<group>";
+		};
+		3855BDFD2455EF67007B123C /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3855BDFE2455EF67007B123C /* EnterpriseDetailView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		3855BDFF2455EF67007B123C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3855BE002455EF67007B123C /* Rubik-MediumItalic.ttf */,
+				3855BE012455EF67007B123C /* Rubik-Bold.ttf */,
+				3855BE022455EF67007B123C /* Rubik-Light.ttf */,
+				3855BE032455EF67007B123C /* Rubik-Medium.ttf */,
+				3855BE042455EF67007B123C /* Rubik-Black.ttf */,
+				3855BE052455EF67007B123C /* Rubik-Italic.ttf */,
+				3855BE062455EF67007B123C /* Rubik-LightItalic.ttf */,
+				3855BE072455EF67007B123C /* Rubik-BlackItalic.ttf */,
+				3855BE082455EF67007B123C /* Rubik-Regular.ttf */,
+				3855BE092455EF67007B123C /* Rubik-BoldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3855BE152455EF8D007B123C /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				3855BE162455EF8D007B123C /* IoasysCustomView.swift */,
+			);
+			path = Architecture;
 			sourceTree = "<group>";
 		};
 		386D0818244900BE00A465A8 = {
@@ -130,83 +212,27 @@
 			isa = PBXGroup;
 			children = (
 				386D0832244900C100A465A8 /* Info.plist */,
-				38B9490E2449F03300127BB0 /* Extensions */,
 				38A273F6244904FA00A79613 /* Default */,
-				38A273F52449040C00A79613 /* Model */,
+				38B9490E2449F03300127BB0 /* Extensions */,
+				3855BDDB2455EDD5007B123C /* Model */,
 				38A273F42449040300A79613 /* View */,
-				38A273F3244903F800A79613 /* Controller */,
+				3855BDE22455EDD5007B123C /* Controller */,
 			);
 			path = "Empresas-ioasys";
-			sourceTree = "<group>";
-		};
-		387EE99C244A507F004F0883 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				387EE9A3244A509B004F0883 /* Rubik-Black.ttf */,
-				387EE9A0244A509B004F0883 /* Rubik-BlackItalic.ttf */,
-				387EE9A1244A509B004F0883 /* Rubik-Bold.ttf */,
-				387EE99E244A509B004F0883 /* Rubik-BoldItalic.ttf */,
-				387EE99D244A509B004F0883 /* Rubik-Italic.ttf */,
-				387EE9A2244A509B004F0883 /* Rubik-Light.ttf */,
-				387EE9A5244A509B004F0883 /* Rubik-LightItalic.ttf */,
-				387EE99F244A509B004F0883 /* Rubik-Medium.ttf */,
-				387EE9A6244A509B004F0883 /* Rubik-MediumItalic.ttf */,
-				387EE9A4244A509B004F0883 /* Rubik-Regular.ttf */,
-			);
-			name = Fonts;
-			sourceTree = "<group>";
-		};
-		388F41C5244BE8BD00FFB0CD /* User */ = {
-			isa = PBXGroup;
-			children = (
-				388F41C6244BE8CF00FFB0CD /* User.swift */,
-				388F41C8244BF09F00FFB0CD /* UserModelController.swift */,
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
-		38A273F3244903F800A79613 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				386D0828244900BE00A465A8 /* LoginViewController.swift */,
-				38B949112449F2E100127BB0 /* EnterpriseViewController.swift */,
-				3885A7EA244A03660072B65D /* EnterpriseTableViewController.swift */,
-
-				387EE998244A4CF7004F0883 /* EnterpriseTableViewCell.swift */,
-				38B7904C244A7032001F7B56 /* EnterpriseDetailViewController.swift */,
-				387A8A43244B5273001704D5 /* EnterpriseSearchBarController.swift */,
-			);
-			name = Controller;
 			sourceTree = "<group>";
 		};
 		38A273F42449040300A79613 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				38B9490C2449EE4A00127BB0 /* LoginView.swift */,
-				38B949132449F31A00127BB0 /* EnterpriseView.swift */,
-				3885A7EC244A04880072B65D /* EnterpriseContentView.swift */,
-				387EE99A244A4DA8004F0883 /* EnterpriseTableViewCellStyle.swift */,
-				38B7904E244A7047001F7B56 /* EnterpriseDetailView.swift */,
-				387A8A41244B3FCC001704D5 /* EnterpriseSearchBar.swift */,
-				38B949092449659E00127BB0 /* Archiecture */,
-				387EE99C244A507F004F0883 /* Fonts */,
-				386D082A244900BE00A465A8 /* Main.storyboard */,
+				3855BE152455EF8D007B123C /* Architecture */,
+				3855BDF42455EDFA007B123C /* Login */,
+				3855BDF52455EE04007B123C /* Enterprises */,
+				3855BDFD2455EF67007B123C /* Detail */,
+				3855BDFF2455EF67007B123C /* Fonts */,
 				386D082F244900C100A465A8 /* LaunchScreen.storyboard */,
 				386D082D244900C100A465A8 /* Assets.xcassets */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		38A273F52449040C00A79613 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				383AB709244A165D00EDFC5F /* APIAcess.swift */,
-
-				388F41C5244BE8BD00FFB0CD /* User */,
-
-				383AB706244A110E00EDFC5F /* Enterprise */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		38A273F6244904FA00A79613 /* Default */ = {
@@ -218,14 +244,6 @@
 			path = Default;
 			sourceTree = "<group>";
 		};
-		38B949092449659E00127BB0 /* Archiecture */ = {
-			isa = PBXGroup;
-			children = (
-				38B9490A244965C300127BB0 /* IoasysCustomView.swift */,
-			);
-			name = Archiecture;
-			sourceTree = "<group>";
-		};
 		38B9490E2449F03300127BB0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,7 +251,6 @@
 				38B949152449F47D00127BB0 /* Extension+NSNotification.swift */,
 				387A8A45244B7797001704D5 /* Extensio+UIWindow.swift */,
 				388F41CA244CC8EE00FFB0CD /* Extension+UIView.swift */,
-
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -302,19 +319,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				387EE9A8244A509B004F0883 /* Rubik-BoldItalic.ttf in Resources */,
-				387EE9A7244A509B004F0883 /* Rubik-Italic.ttf in Resources */,
 				386D0831244900C100A465A8 /* LaunchScreen.storyboard in Resources */,
-				387EE9A9244A509B004F0883 /* Rubik-Medium.ttf in Resources */,
-				387EE9AC244A509B004F0883 /* Rubik-Light.ttf in Resources */,
-				387EE9AA244A509B004F0883 /* Rubik-BlackItalic.ttf in Resources */,
-				387EE9AE244A509B004F0883 /* Rubik-Regular.ttf in Resources */,
-				387EE9AB244A509B004F0883 /* Rubik-Bold.ttf in Resources */,
+				3855BE132455EF67007B123C /* Rubik-Regular.ttf in Resources */,
+				3855BE112455EF67007B123C /* Rubik-LightItalic.ttf in Resources */,
+				3855BE0D2455EF67007B123C /* Rubik-Light.ttf in Resources */,
+				3855BE0F2455EF67007B123C /* Rubik-Black.ttf in Resources */,
 				386D082E244900C100A465A8 /* Assets.xcassets in Resources */,
-				387EE9B0244A509B004F0883 /* Rubik-MediumItalic.ttf in Resources */,
-				387EE9AF244A509B004F0883 /* Rubik-LightItalic.ttf in Resources */,
-				387EE9AD244A509B004F0883 /* Rubik-Black.ttf in Resources */,
-				386D082C244900BE00A465A8 /* Main.storyboard in Resources */,
+				3855BE122455EF67007B123C /* Rubik-BlackItalic.ttf in Resources */,
+				3855BE102455EF67007B123C /* Rubik-Italic.ttf in Resources */,
+				3855BE0B2455EF67007B123C /* Rubik-MediumItalic.ttf in Resources */,
+				3855BE0C2455EF67007B123C /* Rubik-Bold.ttf in Resources */,
+				3855BE142455EF67007B123C /* Rubik-BoldItalic.ttf in Resources */,
+				3855BE0E2455EF67007B123C /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,27 +341,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3855BDF02455EDD5007B123C /* LoginViewController.swift in Sources */,
 				38B949162449F47D00127BB0 /* Extension+NSNotification.swift in Sources */,
-				38B9490B244965C300127BB0 /* IoasysCustomView.swift in Sources */,
 				388F41CB244CC8EE00FFB0CD /* Extension+UIView.swift in Sources */,
-				386D0829244900BE00A465A8 /* LoginViewController.swift in Sources */,
-				38B7904D244A7032001F7B56 /* EnterpriseDetailViewController.swift in Sources */,
-				38B7904F244A7047001F7B56 /* EnterpriseDetailView.swift in Sources */,
+				3855BDFC2455EEEF007B123C /* Enterprise.swift in Sources */,
 				3885A7ED244A04880072B65D /* EnterpriseContentView.swift in Sources */,
-				387A8A44244B5273001704D5 /* EnterpriseSearchBarController.swift in Sources */,
-				383AB705244A0C7C00EDFC5F /* Enterprise.swift in Sources */,
-				387EE999244A4CF7004F0883 /* EnterpriseTableViewCell.swift in Sources */,
 				386D0825244900BE00A465A8 /* AppDelegate.swift in Sources */,
-				388F41C7244BE8CF00FFB0CD /* User.swift in Sources */,
-				3885A7EB244A03660072B65D /* EnterpriseTableViewController.swift in Sources */,
+				3855BDF12455EDD5007B123C /* EnterpriseDetailViewController.swift in Sources */,
+				3855BE172455EF8D007B123C /* IoasysCustomView.swift in Sources */,
 				38B949142449F31A00127BB0 /* EnterpriseView.swift in Sources */,
 				387A8A46244B7797001704D5 /* Extensio+UIWindow.swift in Sources */,
-				383AB70A244A165D00EDFC5F /* APIAcess.swift in Sources */,
+				3855BDEF2455EDD5007B123C /* EnterpriseViewController.swift in Sources */,
+				3855BDEB2455EDD5007B123C /* UserModelController.swift in Sources */,
+				3855BDEA2455EDD5007B123C /* User.swift in Sources */,
+				3855BDFB2455EEEF007B123C /* EnterpriseModelController.swift in Sources */,
+				3855BDF32455EDD5007B123C /* EnterpriseSearchBarController.swift in Sources */,
+				3855BDE92455EDD5007B123C /* APIAcess.swift in Sources */,
+				3855BE0A2455EF67007B123C /* EnterpriseDetailView.swift in Sources */,
 				387EE99B244A4DA8004F0883 /* EnterpriseTableViewCellStyle.swift in Sources */,
-				38B949122449F2E100127BB0 /* EnterpriseViewController.swift in Sources */,
 				387A8A42244B3FCC001704D5 /* EnterpriseSearchBar.swift in Sources */,
-				383AB708244A140000EDFC5F /* EnterpriseModelController.swift in Sources */,
-				388F41C9244BF09F00FFB0CD /* UserModelController.swift in Sources */,
+				3855BDF22455EDD5007B123C /* EnterpriseTableViewController.swift in Sources */,
+				3855BDEE2455EDD5007B123C /* EnterpriseTableViewCell.swift in Sources */,
 				38B9490D2449EE4A00127BB0 /* LoginView.swift in Sources */,
 				386D0827244900BE00A465A8 /* SceneDelegate.swift in Sources */,
 				38B949102449F04B00127BB0 /* Extension+UIColor.swift in Sources */,
@@ -355,14 +371,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		386D082A244900BE00A465A8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				386D082B244900BE00A465A8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		386D082F244900C100A465A8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -502,7 +510,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Tribuzy.Empresas-ioasys";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -520,7 +528,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Tribuzy.Empresas-ioasys";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
